@@ -24,7 +24,7 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
 <nomac xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1"/>
 <routable_control_ip xmlns="http://www.protogeni.net/resources/rspec/ext/emulab/1"/>
 <sliver_type xmlns="http://www.geni.net/resources/rspec/3" name="emulab-xen">
-<disk_image xmlns="http://www.geni.net/resources/rspec/3" name="urn:publicid:IDN+utahddc.geniracks.net+image+ch-geni-net:Floodlightcontroller" url="https://www.utahddc.geniracks.net/image_metadata.php?uuid=fbc68b69-ad91-11e6-9a79-000099989701"/>
+<disk_image xmlns="http://www.geni.net/resources/rspec/3" name="urn:publicid:IDN+instageni.maxgigapop.net+image+ch-geni-net:FloodlightOF10" url="https://www.instageni.maxgigapop.net/image_metadata.php?uuid=e59f4b54-e33b-11e6-b477-000000000000"/>
 </sliver_type>
 <services xmlns="http://www.geni.net/resources/rspec/3"/>
 <site xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" id="Site 1"/>
