@@ -1,0 +1,81 @@
+#Copyright (c) 2015 Raytheon BBN Technologies
+#
+#Permission is hereby granted, free of charge, to any person obtaining
+#a copy of this software and/or hardware specification (the "Work") to
+#deal in the Work without restriction, including without limitation the
+#rights to use, copy, modify, merge, publish, distribute, sublicense,
+#and/or sell copies of the Work, and to permit persons to whom the Work
+#is furnished to do so, subject to the following conditions:
+#
+#The above copyright notice and this permission notice shall be
+#included in all copies or substantial portions of the Work.
+#
+#THE WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+#OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+#MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+#NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+#HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+#WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+#OUT OF OR IN CONNECTION WITH THE WORK OR THE USE OR OTHER DEALINGS
+#IN THE WORK. 
+
+---
+
+- name: test server and client
+  hosts: all
+  sudo: True
+  tasks:
+   - name: wait for initialization to finish
+     pause: minutes=5
+
+   - name: test installation
+     shell:  if [ -f /local/installed.txt ] ; then echo "yes" ; else echo "no" ; fi
+     register: installation_test
+     failed_when: "'no' in installation_test.stdout_lines"
+   - debug: var=installation_test.stdout_lines
+  
+- name: test server
+  hosts: server
+  sudo: True
+  tasks:
+   - name: check iperf running
+     shell: ps aux | grep iperf
+     register: iperf_running
+     failed_when: "'iperf -s -i 10 &> /var/www/iperflogs/iperf-server.log' not in iperf_running.stdout"
+   - debug: var=iperf_running.stdout_lines
+  
+   - name: test whether files have been copied to /var/www
+     shell:  if [ -f /var/www/index.html ] ; then echo "yes" ; else echo "no" ; fi
+     register: file_test
+     failed_when: "'no' in file_test.stdout_lines"
+   - debug: var=file_test.stdout_lines
+   
+   - name: check apache server running
+     command: service apache2 status
+     register: apache_running
+   - debug: var=apache_running.stdout_lines
+
+- name: test client
+  hosts: client
+  sudo: True
+  tasks:
+   - name: ping test
+     command: ping -c 5 10.10.10.1
+     register: ping_test
+   - debug: var=ping_test.stdout_lines
+
+   - name: iperf test
+     command: iperf -c 10.10.10.1 -P 2
+     register: iperf_test
+     failed_when: "'failed' in iperf_test.stderr"
+     async: 30
+     poll: 10
+   - debug: var=iperf_test.stdout_lines
+   
+   - name: wget test
+     command: wget -q http://10.10.10.1/graphics/hellogeni-banner.png -O /tmp/banner_test.png
+     register: wget_test
+     async: 60
+     poll: 10
+   - debug: var=wget_test
+
