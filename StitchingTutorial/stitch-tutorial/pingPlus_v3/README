@@ -1,0 +1,64 @@
+LAYER 2 PING
+=================
+
+Description
+==============
+This software is a Layer 2 Ping, that uses a custom ETH_TYPE for sending
+Ethernet frames. There are two parts on the software, the Listener and the 
+Sender. The Listener, listens for packets of a specific ETH_TYPE and replies. 
+The sender sends Ethernet frames to a specific MAC Address and waits for a reply. 
+The sender sends a mathematical challenge (an addition of two numbers) to the
+listener and the listener replies with the answer to that challenge. 
+
+Dependencies
+===============
+PingPlus needs gcc installed in order to be able to compile it. 
+
+Compile 
+=========
+This software has been tested on Fedora 10 and Ubuntu 10.0.4.
+To compile the software follow these steps 
+  * untar the package (tar xvfz pingPlus.tar.gz)
+  * this will create a directory pingPlus, cd to that directory
+    (cd pingPlus)
+  * Run make (make). This will produce two executables :
+      - pingPlus
+      - pingPlusListener
+
+Test
+=====
+pingPlusListener takes one argument:
+  * eth_type : is the ETH_TYPE to use for the Ethernet frames
+  e.g. pingPlusListener 10111
+
+pingPlus takes four arguments (the fourth is optional)
+  * remote-host : the MAC address of host in 00:11:22:33:44:55 form.
+  * interface : the name of local Ethernet interface on which to send.
+  * eth_type : is the ETH_TYPE to use for the Ethernet frames.
+  * num_pkts option argument that specifies how many packets to send, default is 1.
+
+After compiling, to test the software you will need two terminals on 
+the same host:
+   * In terminal 1 and while under the pingPlus directory type:
+     sudo ./pingPlustListener 10111
+   * In terminal 1 and while under the pingPlus directory type:
+     sudo ./pingPlus <eth_address_of_host> <name_of_intf> 10111
+
+You should see on terminal 1, the receiver getting the request and replying and 
+on terminal 2 the answer to the ping. 
+
+To terminate the pingPlusListener press Ctrl-c. 
+
+Software Dependencies
+======================
+To compile the software you will need to install the gcc and make packages. 
+
+UBUNTU 
+------
+sudo apt-get install gcc make
+
+Fedora 
+------
+sudo yum install gcc make
+
+
