@@ -1,0 +1,26 @@
+<rspec xmlns="http://www.geni.net/resources/rspec/3" xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" xmlns:tour="http://www.protogeni.net/resources/rspec/ext/apt-tour/1" xmlns:jacks="http://www.protogeni.net/resources/rspec/ext/jacks/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.geni.net/resources/rspec/3    http://www.geni.net/resources/rspec/3/request.xsd" type="request">
+<node xmlns="http://www.geni.net/resources/rspec/3" client_id="client">
+<icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://portal.geni.net/images/VM-noTxt-centered.svg"/>
+<sliver_type xmlns="http://www.geni.net/resources/rspec/3" name="default-vm"/>
+<interface xmlns="http://www.geni.net/resources/rspec/3" client_id="interface-0">
+<ip xmlns="http://www.geni.net/resources/rspec/3" address="10.10.10.2" type="ipv4" netmask="255.255.255.0"/>
+</interface>
+<services xmlns="http://www.geni.net/resources/rspec/3"/>
+<site xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" id="Site 3"/>
+</node>
+<node xmlns="http://www.geni.net/resources/rspec/3" client_id="server">
+<icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://portal.geni.net/images/VM-noTxt-centered.svg"/>
+<routable_control_ip xmlns="http://www.protogeni.net/resources/rspec/ext/emulab/1"/>
+<sliver_type xmlns="http://www.geni.net/resources/rspec/3" name="default-vm"/>
+<interface xmlns="http://www.geni.net/resources/rspec/3" client_id="interface-1">
+<ip xmlns="http://www.geni.net/resources/rspec/3" address="10.10.10.1" type="ipv4" netmask="255.255.255.0"/>
+</interface>
+<services xmlns="http://www.geni.net/resources/rspec/3"/>
+<site xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" id="Site 3"/>
+</node>
+<link xmlns="http://www.geni.net/resources/rspec/3" client_id="link-0">
+<interface_ref xmlns="http://www.geni.net/resources/rspec/3" client_id="interface-0"/>
+<interface_ref xmlns="http://www.geni.net/resources/rspec/3" client_id="interface-1"/>
+
+</link>
+</rspec>
