@@ -1,105 +1,51 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-  
-  
-
-  
-
-
-  
-
-  <head>
-    <title>
-      Attachment – GENI: geni
-    </title>
-        <link rel="search" href="/geni/search" />
-        <link rel="help" href="/geni/wiki/TracGuide" />
-        <link rel="alternate" href="/geni/raw-attachment/wiki/GENIExperimenter/Tutorials/AnsibleHelloGENI/Execute/hello-server.2.yml" type="application/x-yaml; charset=iso-8859-15" title="Original Format" />
-        <link rel="up" href="/geni/wiki/GENIExperimenter/Tutorials/AnsibleHelloGENI/Execute" title="GENIExperimenter/Tutorials/AnsibleHelloGENI/Execute" />
-        <link rel="start" href="/geni/wiki" />
-        <link rel="stylesheet" href="/geni/chrome/common/css/trac.css" type="text/css" /><link rel="stylesheet" href="/geni/chrome/common/css/code.css" type="text/css" />
-        <link rel="shortcut icon" href="/geni/chrome/common/geni/geni.ico" type="image/x-icon" />
-        <link rel="icon" href="/geni/chrome/common/geni/geni.ico" type="image/x-icon" />
-      <link type="application/opensearchdescription+xml" rel="search" href="/geni/search/opensearch" title="Search GENI: geni" />
-    <script type="text/javascript" src="/geni/chrome/common/js/jquery.js"></script><script type="text/javascript" src="/geni/chrome/common/js/trac.js"></script><script type="text/javascript" src="/geni/chrome/common/js/search.js"></script>
-    <!--[if lt IE 7]>
-    <script type="text/javascript" src="/geni/chrome/common/js/ie_pre7_hacks.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div id="banner">
-      <div id="header">
-        <a id="logo" href="http://www.geni.net/"><img src="/geni/chrome/common/geni/header.gif" alt="GENI Wiki" /></a>
-      </div>
-      <form id="search" method="get" action="http://www.google.com/search">
-        <div>
-          <label for="proj-search">Search:</label>
-          <input type="text" id="proj-search" name="q" size="18" value="" />
-          <input type="submit" value="Search" />
-          <input value="10" name="num" type="hidden" />
-          <input value="en" name="hl" type="hidden" />
-          <input value="ISO-8859-1" name="ie" type="hidden" />
-          <input value="Google Search" name="btnG" type="hidden" />
-          <input value="groups.geni.net" name="as_sitesearch" type="hidden" />
-          <input value="off" name="safe" type="hidden" />
-        </div>
-      </form>
-      <div id="metanav" class="nav">
-    <ul>
-      <li class="first"><a href="/geni/login">Login</a></li><li><a href="/geni/prefs">Preferences</a></li><li><a href="/geni/wiki/TracGuide">Help/Guide</a></li><li class="last"><a href="/geni/about">About Trac</a></li>
-    </ul>
-  </div>
-    </div>
-    <div id="mainnav" class="nav">
-    <ul>
-      <li class="last first active"><a href="/geni/wiki">Wiki</a></li>
-    </ul>
-  </div>
-    <div id="main">
-      <div id="ctxtnav" class="nav">
-        <h2>Context Navigation</h2>
-          <ul>
-              <li class="last first"><a href="/geni/wiki/GENIExperimenter/Tutorials/AnsibleHelloGENI/Execute">Back to GENIExperimenter/Tutorials/AnsibleHelloGENI/Execute</a></li>
-          </ul>
-        <hr />
-      </div>
-    <div id="content" class="attachment">
-        <h1><a href="/geni/wiki/GENIExperimenter/Tutorials/AnsibleHelloGENI/Execute">GENIExperimenter/Tutorials/AnsibleHelloGENI/Execute</a>: hello-server.2.yml</h1>
-        <table id="info" summary="Description">
-          <tbody>
-            <tr>
-              <th scope="col">
-                File hello-server.2.yml, <span title="1965 bytes">1.9 KB</span>
-                (added by sedwards@bbn.com,  <a class="timeline" href="/geni/timeline?from=2015-03-25T07%3A18%3A26-0400&amp;precision=second" title="2015-03-25T07:18:26-0400 in Timeline">23 months</a> ago)
-              </th>
-            </tr>
-            <tr>
-              <td class="message searchable">
-                
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <div id="preview" class="searchable">
-    <table class="code"><thead><tr><th class="lineno" title="Line numbers">Line</th><th class="content"> </th></tr></thead><tbody><tr><th id="L1"><a href="#L1">1</a></th><td>---</td></tr><tr><th id="L2"><a href="#L2">2</a></th><td>- name: Configure server</td></tr><tr><th id="L3"><a href="#L3">3</a></th><td>  hosts: server</td></tr><tr><th id="L4"><a href="#L4">4</a></th><td>  sudo: True</td></tr><tr><th id="L5"><a href="#L5">5</a></th><td>  vars: </td></tr><tr><th id="L6"><a href="#L6">6</a></th><td>    web_root: /var/www</td></tr><tr><th id="L7"><a href="#L7">7</a></th><td>  tasks:</td></tr><tr><th id="L8"><a href="#L8">8</a></th><td>   - name: install apache2</td></tr><tr><th id="L9"><a href="#L9">9</a></th><td>     apt: name=apache2 update_cache=yes</td></tr><tr><th id="L10"><a href="#L10">10</a></th><td>   - name: install iperf</td></tr><tr><th id="L11"><a href="#L11">11</a></th><td>     apt: name=iperf update_cache=yes</td></tr><tr><th id="L12"><a href="#L12">12</a></th><td>   - name: /usr/sbin/a2enmod status</td></tr><tr><th id="L13"><a href="#L13">13</a></th><td>     command: /usr/sbin/a2enmod status</td></tr><tr><th id="L14"><a href="#L14">14</a></th><td>   - name: check /etc/apache2/mods-enabled/status.conf file is absent   </td></tr><tr><th id="L15"><a href="#L15">15</a></th><td>     file: &gt;</td></tr><tr><th id="L16"><a href="#L16">16</a></th><td>        path=/etc/apache2/mods-enabled/status.conf</td></tr><tr><th id="L17"><a href="#L17">17</a></th><td>        state=absent    </td></tr><tr><th id="L18"><a href="#L18">18</a></th><td>   - name: copy website/index.html into the web_root</td></tr><tr><th id="L19"><a href="#L19">19</a></th><td>     synchronize: src=website/index.html dest= {{ web_root }}</td></tr><tr><th id="L20"><a href="#L20">20</a></th><td>   - name: copy the website/graphics directory into /var/www</td></tr><tr><th id="L21"><a href="#L21">21</a></th><td>     synchronize: src=website/graphics dest=/var/www</td></tr><tr><th id="L22"><a href="#L22">22</a></th><td>   - name: rm -rf /var/www/html</td></tr><tr><th id="L23"><a href="#L23">23</a></th><td>     file: path=/var/www/html state=absent</td></tr><tr><th id="L24"><a href="#L24">24</a></th><td>   - name: Make simlink to webfiles</td></tr><tr><th id="L25"><a href="#L25">25</a></th><td>     file: &gt;</td></tr><tr><th id="L26"><a href="#L26">26</a></th><td>        dest=/var/www/html</td></tr><tr><th id="L27"><a href="#L27">27</a></th><td>        src=/var/www/</td></tr><tr><th id="L28"><a href="#L28">28</a></th><td>        state=link</td></tr><tr><th id="L29"><a href="#L29">29</a></th><td>   - name: restart apache2 service</td></tr><tr><th id="L30"><a href="#L30">30</a></th><td>     service: name=apache2 state=restarted</td></tr><tr><th id="L31"><a href="#L31">31</a></th><td>   - name: Make sure /etc/apache2/conf.d/extendedstatus file contains "ExtendedStatus On"</td></tr><tr><th id="L32"><a href="#L32">32</a></th><td>     lineinfile: line='ExtendedStatus On' dest=/etc/apache2/conf.d/extendedstatus create=yes state=present</td></tr><tr><th id="L33"><a href="#L33">33</a></th><td>   - name: Make sure /etc/apache2/sites-available/default contains Location information</td></tr><tr><th id="L34"><a href="#L34">34</a></th><td>     lineinfile: </td></tr><tr><th id="L35"><a href="#L35">35</a></th><td>       dest: /etc/apache2/sites-available/default  </td></tr><tr><th id="L36"><a href="#L36">36</a></th><td>       create: yes </td></tr><tr><th id="L37"><a href="#L37">37</a></th><td>       state: present </td></tr><tr><th id="L38"><a href="#L38">38</a></th><td>       insertafter: EOF </td></tr><tr><th id="L39"><a href="#L39">39</a></th><td>       backup: yes</td></tr><tr><th id="L40"><a href="#L40">40</a></th><td>       regexp: "{{ item.regexp }}"</td></tr><tr><th id="L41"><a href="#L41">41</a></th><td>       line: "{{ item.line }}"</td></tr><tr><th id="L42"><a href="#L42">42</a></th><td>     with_items:</td></tr><tr><th id="L43"><a href="#L43">43</a></th><td>       - { regexp: '^&lt;Location /server-status&gt;', line: '&lt;Location /server-status&gt;' }</td></tr><tr><th id="L44"><a href="#L44">44</a></th><td>       - { regexp: '^   SetHandler server-status', line: '   SetHandler server-status' }</td></tr><tr><th id="L45"><a href="#L45">45</a></th><td>       - { regexp: '^   Allow from all', line: '   Allow from all' }</td></tr><tr><th id="L46"><a href="#L46">46</a></th><td>       - { regexp: '^&lt;/Location&gt;', line: '&lt;/Location&gt;' }</td></tr><tr><th id="L47"><a href="#L47">47</a></th><td>   - name: create directory for iperf logs in /var/www/iperflogs with permissions of 755</td></tr><tr><th id="L48"><a href="#L48">48</a></th><td>     file: &gt;</td></tr><tr><th id="L49"><a href="#L49">49</a></th><td>        dest=/var/www/iperflogs</td></tr><tr><th id="L50"><a href="#L50">50</a></th><td>        state=directory</td></tr><tr><th id="L51"><a href="#L51">51</a></th><td>        mode=755</td></tr></tbody></table>
-        </div>
-    </div>
-    <div id="altlinks">
-      <h3>Download in other formats:</h3>
-      <ul>
-        <li class="last first">
-          <a rel="nofollow" href="/geni/raw-attachment/wiki/GENIExperimenter/Tutorials/AnsibleHelloGENI/Execute/hello-server.2.yml">Original Format</a>
-        </li>
-      </ul>
-    </div>
-    </div>
-    <div id="footer" lang="en" xml:lang="en"><hr />
-      <a id="tracpowered" href="http://trac.edgewall.org/"><img src="/geni/chrome/common/trac_logo_mini.png" height="30" width="107" alt="Trac Powered" /></a>
-      <p class="left">
-        Powered by <a href="/geni/about"><strong>Trac 0.11.7</strong></a><br />
-        By <a href="http://www.edgewall.org/">Edgewall Software</a>.
-      </p>
-      <p class="right">GENI Home Page<br /><a href="http://www.geni.net/">http://www.geni.net/</a></p>
-    </div>
-  </body>
-</html>
+---
+- name: Configure server
+  hosts: server
+  sudo: True
+  vars: 
+    web_root: /var/www
+  tasks:
+   - name: install apache2
+     apt: name=apache2 update_cache=yes
+   - name: install iperf
+     apt: name=iperf update_cache=yes
+   - name: /usr/sbin/a2enmod status
+     command: /usr/sbin/a2enmod status
+   - name: check /etc/apache2/mods-enabled/status.conf file is absent   
+     file: >
+        path=/etc/apache2/mods-enabled/status.conf
+        state=absent    
+   - name: copy website/index.html into the web_root
+     synchronize: src=website/index.html dest= {{ web_root }}
+   - name: copy the website/graphics directory into /var/www
+     synchronize: src=website/graphics dest=/var/www
+   - name: rm -rf /var/www/html
+     file: path=/var/www/html state=absent
+   - name: Make simlink to webfiles
+     file: >
+        dest=/var/www/html
+        src=/var/www/
+        state=link
+   - name: restart apache2 service
+     service: name=apache2 state=restarted
+   - name: Make sure /etc/apache2/conf.d/extendedstatus file contains "ExtendedStatus On"
+     lineinfile: line='ExtendedStatus On' dest=/etc/apache2/conf.d/extendedstatus create=yes state=present
+   - name: Make sure /etc/apache2/sites-available/default contains Location information
+     lineinfile: 
+       dest: /etc/apache2/sites-available/default  
+       create: yes 
+       state: present 
+       insertafter: EOF 
+       backup: yes
+       regexp: "{{ item.regexp }}"
+       line: "{{ item.line }}"
+     with_items:
+       - { regexp: '^<Location /server-status>', line: '<Location /server-status>' }
+       - { regexp: '^   SetHandler server-status', line: '   SetHandler server-status' }
+       - { regexp: '^   Allow from all', line: '   Allow from all' }
+       - { regexp: '^</Location>', line: '</Location>' }
+   - name: create directory for iperf logs in /var/www/iperflogs with permissions of 755
+     file: >
+        dest=/var/www/iperflogs
+        state=directory
+        mode=755
