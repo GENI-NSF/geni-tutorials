@@ -8,7 +8,7 @@ The **geni-tutorials** repository includes supporting files used for [GENI Tutor
  
  - **PingPlus**: Contains files required for the [Layer 2 Ping Experiment](http://groups.geni.net/geni/wiki/Tutorials/Layer2Ping/Procedure), which shows how to run a Layer 2 ping between hosts and optionally modify the program to do measurements. 
  
- -**StitchingTutorial**: Contains files required for the [GENI VLAN Stitching Tutorial](http://groups.geni.net/geni/wiki/GENIExperimenter/Tutorials/StitchingTutorial), which guides experimenter through an example where local and stiched VLAN performance is compared.
+- **StitchingTutorial**: Contains files required for the [GENI VLAN Stitching Tutorial](http://groups.geni.net/geni/wiki/GENIExperimenter/Tutorials/StitchingTutorial), which guides experimenter through an example where local and stiched VLAN performance is compared.
  
  - **WebServer**: Contains files required for the [Running a WebServer experiment](http://groups.geni.net/geni/wiki/WebServerExample), which guides experimenter through an assignment to build a functional web server, the basics of distributed programming, client/server structures, and issues in building high performance servers.  
  
