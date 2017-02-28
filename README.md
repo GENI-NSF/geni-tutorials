@@ -1,4 +1,4 @@
-The **geni-tutorials** repository includes supporting files used for [GENI tutorials](http://groups.geni.net/geni/wiki/GENIExperimenter/Tutorials).  Directories found in this repository are organized as follows:
+The **geni-tutorials** repository includes supporting files used for [GENI Tutorials](http://groups.geni.net/geni/wiki/GENIExperimenter/Tutorials).  Directories found in this repository are organized as follows:
  
  - **AnsibleHelloGENI**: Contains files required for the [Hello GENI Ansible experiment](http://groups.geni.net/geni/wiki/GENIExperimenter/Tutorials/AnsibleHelloGENI), which convert the existing [Hello GENI](http://groups.geni.net/geni/wiki/GENIExperimenter/Tutorials/RunHelloGENI) exercise and install script to use the [Ansible](http://www.ansible.com/home) configuration management tool. 
  - **HelloGENI**: Contains files required for the [Hello GENI Experiment](http://groups.geni.net/geni/wiki/GENIExperimenter/Tutorials/RunHelloGENI), which is a step-by-step walkthrough gor setting up and running a GENI Experiment.
@@ -9,8 +9,3 @@ The **geni-tutorials** repository includes supporting files used for [GENI tutor
  - GRAPHICS: Commonly used graphics to keep a consistent presentation for GENI tutorials.
  - LICENSE: Contains XML, Text and Shell version of GENI LICENSE which are to be added to tutorial files.
  - TEMPLATE: Commonly used templates to aid in the writing tutorials and keep a consistent level of information
- 
-
-Each new tutorial must be developed on its own branch and a Pull Request must be submitted to have tutorial added to Master branch.
-
-
