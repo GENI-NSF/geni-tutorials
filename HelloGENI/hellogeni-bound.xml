@@ -28,7 +28,7 @@ IN THE WORK.
     <sliver_type name="emulab-openvz"/>
     <services>
       <execute command="sudo /local/install-script.sh" shell="sh"/>
-      <install install_path="/local" url="http://www.gpolab.bbn.com/experiment-support/HelloGENI//hellogeni-install.tar.gz"/>
+      <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/HelloGENI/hellogeni-install.tar.gz"/>
     </services>
     <interface client_id="server:if0">
     </interface>
@@ -37,7 +37,7 @@ IN THE WORK.
     <sliver_type name="emulab-openvz"/>
     <services>
       <execute command="sudo /local/install-script.sh" shell="sh"/>
-      <install install_path="/local" url="http://www.gpolab.bbn.com/experiment-support/HelloGENI//hellogeni-install.tar.gz"/>
+      <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/HelloGENI/hellogeni-install.tar.gz"/>
     </services>
     <interface client_id="client:if0">
     </interface>
