@@ -4,6 +4,8 @@ The **geni-tutorials** repository includes supporting files used for [GENI Tutor
  
 - **HelloGENI**: Contains files required for the [Hello GENI Experiment](http://groups.geni.net/geni/wiki/GENIExperimenter/Tutorials/RunHelloGENI), which is a step-by-step walkthrough gor setting up and running a GENI Experiment.
  
+- **LabOne/ndn**: Contains files required for the [LabOne with NDN using Jacks Tutorial](http://groups.geni.net/geni/wiki/GENIExperimenter/Tutorials/jacks/GettingStarted_PartII_ndn/Procedure). Tutorial RSpec is found in GENI Portal.
+
 - **OVSFloodLight**: Contains files required for the [Intro to OpenFlow Tutorial with FloodLight Controller Experiment](http://groups.geni.net/geni/wiki/GENIExperimenter/Tutorials/OpenFlowOVS-Floodlight), which guides experimenters through [OpenFlow](https://www.opennetworking.org/sdn-resources/openflow) Controller capabilities using [Open VSwitch9OVS)](https://www.sdxcentral.com/cloud/open-source/definitions/what-is-open-vswitch/) .
  
 - **OpenFlowHW/pvtVlan**: Contains files required for the [OpenFlow using a Hardware Switch Tutorial](http://groups.geni.net/geni/wiki/GENIExperimenter/Tutorials/OpenFlowOVS-Floodlight/HW/DesignSetup), which guides experimenter through a Floodlight Controller experiment using a Hardwas Switch in InstaGENI racks.
