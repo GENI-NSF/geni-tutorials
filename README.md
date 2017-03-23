@@ -16,6 +16,6 @@ The **geni-tutorials** repository includes supporting files used for [GENI Tutor
  
 - **WebServer**: Contains files required for the [Running a WebServer experiment](http://groups.geni.net/geni/wiki/WebServerExample), which guides experimenter through an assignment to build a functional web server, the basics of distributed programming, client/server structures, and issues in building high performance servers.  
 
-- GRAPHICS: Commonly used graphics to keep a consistent presentation for GENI tutorials.
-- LICENSE: Contains XML, Text and Shell version of GENI LICENSE which are to be added to tutorial files.
-- TEMPLATE: Commonly used templates to aid in the writing tutorials and keep a consistent level of information
+- **GRAPHICS**: Commonly used graphics to keep a consistent presentation for GENI tutorials.
+- **LICENSE**: Contains XML, Text and Shell version of GENI LICENSE which are to be added to tutorial files.
+- **TEMPLATE**: Commonly used templates to aid in the writing tutorials and keep a consistent level of information
