@@ -1,0 +1,32 @@
+#
+# Copyright (c) 2017 Raytheon BBN Technologies
+# 
+# Permission is hereby granted, free of charge, to any person obtaining a copy of this 
+# software and/or hardware specification (the “Work”) to deal in the Work without 
+# restriction, including without limitation the rights to use, copy, modify, merge, 
+# publish, distribute, sublicense, and/or sell copies of the Work, and to permit 
+# persons to whom the Work is furnished to do so, subject to the following conditions:  
+# 
+# The above copyright notice and this permission notice shall be included in all 
+# copies or substantial portions of the Work.  
+# 
+# THE WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+# INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+# PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT 
+# HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION 
+# OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE WORK 
+# OR THE USE OR OTHER DEALINGS IN THE WORK. 
+#
+---
+   - name: /usr/sbin/a2enmod status
+     command: /usr/sbin/a2enmod status
+   - name: check /etc/apache2/mods-enabled/status.conf file is absent   
+     file: >
+        path=/etc/apache2/mods-enabled/status.conf
+        state=absent    
+   - name: Make sure /etc/apache2/conf.d/extendedstatus file contains "ExtendedStatus On"
+     lineinfile: line='ExtendedStatus On' dest=/etc/apache2/conf.d/extendedstatus create=yes state=present
+   - name: Make sure /etc/apache2/sites-available/default contains Location information
+     lineinfile: line='<Location /server-status>\n   SetHandler server-status\n   Allow from all\n</Location>' dest=/etc/apache2/sites-available/default  create=yes state=present insertafter=EOF backup=yes
+   - name: restart apache2 service
+     service: name=apache2 state=restarted
