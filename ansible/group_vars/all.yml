@@ -1,5 +1,5 @@
 ---
-WEB_ROOT: /var/www
+WEB_ROOT: /var/www/
 nmap_xml_file: /tmp/nmap.xml
 nmap_html_file: /tmp/nmap.html
 nmap_dir: nmaplogs

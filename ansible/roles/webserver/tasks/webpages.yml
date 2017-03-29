@@ -18,10 +18,10 @@
 # OR THE USE OR OTHER DEALINGS IN THE WORK. 
 #
 ---
-   - name: copy index.html into WEB_ROOT
-     synchronize: src=index.html dest={{ WEB_ROOT }}
-   - name: copy the graphics directory into WEB_ROOT
-     synchronize: src=graphics dest={{ WEB_ROOT }}
+   - name: copy roles/webserver/files/index.html into WEB_ROOT
+     synchronize: src=roles/webserver/files/index.html dest={{ WEB_ROOT }} rsync_path="sudo rsync"
+   - name: copy the roles/webserver/files/graphics directory into WEB_ROOT
+     synchronize: src=roles/webserver/files/graphics dest={{ WEB_ROOT }} rsync_path="sudo rsync" 
    - name: rm -rf WEB_ROOT/html
      file: path={{ WEB_ROOT }}/html state=absent
    - name: Make simlink to webfiles

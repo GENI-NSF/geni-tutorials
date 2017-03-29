@@ -19,7 +19,7 @@
 #
 ---
 - hosts: server*
-  sudo: True
+  sudo: true
   roles:
 #   - iperf
    - webserver
