@@ -25,17 +25,11 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
     <emulab:routable_control_ip/>
     <sliver_type name="default-vm"/>
     <services>
-<execute xmlns="http://www.geni.net/resources/rspec/3" command="sudo /local/install-script-pox.sh" shell="/bin/sh"/>
-<execute xmlns="http://www.geni.net/resources/rspec/3" command="sudo /local/install-script-floodlight.sh" shell="/bin/sh"/>
-<execute command="sudo /local/install-script-wireshark.sh" shell="sh"/>
-<execute xmlns="http://www.geni.net/resources/rspec/3" command="sudo /local/install-script-pox.sh" shell="/bin/sh"/>
 <execute xmlns="http://www.geni.net/resources/rspec/3" command="sudo /local/install-script-ryu.sh" shell="/bin/sh"/>
-<execute xmlns="http://www.geni.net/resources/rspec/3" command="sudo /local/install-script-floodlight.sh" shell="/bin/sh"/>
+<execute command="sudo /local/install-script-wireshark.sh" shell="sh"/>
 <install xmlns="http://www.geni.net/resources/rspec/3" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OpenFlowCtrls/floodlight-install.tar.gz" install_path="/local"/>
-<install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OpenFlowCtrls/pox-install.tar.gz"/>
 <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OVSRyu/wireshark.tar.gz"/>
 <install xmlns="http://www.geni.net/resources/rspec/3" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OpenFlowCtrls/ryu-install.tar.gz" install_path="/local"/>
-<install xmlns="http://www.geni.net/resources/rspec/3" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OpenFlowCtrls/floodlight-install.tar.gz" install_path="/local"/>
 </services>
     <flack:node_info xmlns:flack="http://www.protogeni.net/resources/rspec/ext/flack/1" x="441" y="148" unbound="true"/>
   
