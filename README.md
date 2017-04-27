@@ -5,6 +5,8 @@ The **geni-tutorials** repository includes supporting files used for [GENI Tutor
 - **ansible**: Contains files required to run the [Systematic Experimentation with Ansible experiment](http://groups.geni.net/geni/wiki/GENIExperimenter/Tutorials/SystematicExperimentationAnsible), which creates a simple topology that is then used to create larger, reproducible topologies. The [Ansible](http://www.ansible.com/home) configuration management tool is used to install and configure software on all nodes. 
  
 - **HelloGENI**: Contains files required for the [Hello GENI Experiment](http://groups.geni.net/geni/wiki/GENIExperimenter/Tutorials/RunHelloGENI), which is a step-by-step walkthrough gor setting up and running a GENI Experiment.
+
+- **IPV4 Routing**: Contains files required for the "[IPV4 Routing Exercise](http://groups.geni.net/geni/wiki/GENIEducation/SampleAssignments/IPRouting/Procedure), which show IP Static Routing.
  
 - **LabOne/ndn**: Contains files required for the [LabOne with Named Data Networking using Jacks Tutorial](http://groups.geni.net/geni/wiki/GENIExperimenter/Tutorials/jacks/GettingStarted_PartII_ndn/Procedure). Tutorial RSpec is found in GENI Portal.
 
