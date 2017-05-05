@@ -63,7 +63,7 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
 
 
 <execute command="sudo /local/install-script-wireshark.sh" shell="sh"/>
-<install install_path="/local" url="http://www.gpolab.bbn.com/experiment-support/OpenFlowOVS/wireshark.tar.gz"/>
+<install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OpenFlowCtrls/wireshark.tar.gz"/>
 </services>
 
 <interface xmlns="http://www.geni.net/resources/rspec/3" client_id="interface-1">
