@@ -1,0 +1,71 @@
+/* OSPF configuration file for XORP 
+ *
+ * Host: router-1.xuan-xorp2.ch-geni-net.geni.it.cornell.edu
+ * DATE: 2014-06-09 03:59:12 PM
+ * 
+ */
+
+interfaces {
+  restore-original-config-on-shutdown: false
+  interface eth1 { 
+    description: "virtual interface-eth1"
+    disable: false
+    discard: false
+    vif eth1 {
+        disable: false
+        address 192.168.3.6 {
+		 prefix-length: 24
+ 		 disable: false
+  	}
+    }  
+  }
+  interface eth2 { 
+    description: "virtual interface-eth2"
+    disable: false
+    discard: false
+    vif eth2 {
+        disable: false
+        address 192.168.1.30 {
+		 prefix-length: 24
+ 		 disable: false
+  	}
+    }  
+  }
+}
+
+
+fea {
+    unicast-forwarding4 {
+        disable: false
+    }
+}
+
+
+protocols {
+    ospf4 {
+        router-id: 192.168.1.30
+        area 0.0.0.0 {
+	    area-type:"normal"
+	    interface eth1 {
+	        vif eth1 {
+	          address 192.168.3.6 {
+	            interface-cost 10
+	            hello-interval 5
+	            router-dead-interval 10
+	            disable: false
+	          }
+	        }
+	    }
+	    interface eth2 {
+	        vif eth2 {
+	          address 192.168.1.30 {
+	            interface-cost 10
+	            hello-interval 5
+	            router-dead-interval 10
+	            disable: false
+	          }
+	        }
+	    }
+	}
+    }
+}

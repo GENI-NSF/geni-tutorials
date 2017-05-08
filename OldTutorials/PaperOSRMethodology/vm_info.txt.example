@@ -1,0 +1,8 @@
+router-1.xuan-xorp2.ch-geni-net.geni.it.cornell.edu
+eth0      Link encap:Ethernet  HWaddr 02:07:47:72:19:fb  
+          inet addr:172.17.1.1  Bcast:172.31.255.255  Mask:255.240.0.0
+eth1      Link encap:Ethernet  HWaddr 02:7e:40:75:3f:b2  
+          inet addr:192.168.3.6  Bcast:192.168.3.255  Mask:255.255.255.0
+eth2      Link encap:Ethernet  HWaddr 02:c0:ca:1e:f4:97  
+          inet addr:192.168.1.30  Bcast:192.168.1.255  Mask:255.255.255.0
+          inet addr:127.0.0.1  Mask:255.0.0.0
