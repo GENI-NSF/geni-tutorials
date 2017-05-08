@@ -31,15 +31,15 @@
 <execute xmlns="http://www.geni.net/resources/rspec/3" command="sudo /local/install-script-pox.sh" shell="/bin/sh"/>
 <execute xmlns="http://www.geni.net/resources/rspec/3" command="sudo /local/install-script-ryu.sh" shell="/bin/sh"/>
 <execute xmlns="http://www.geni.net/resources/rspec/3" command="sudo /local/install-script-floodlight.sh" shell="/bin/sh"/>
-<install xmlns="http://www.geni.net/resources/rspec/3" url="http://www.gpolab.bbn.com/experiment-support/OpenFlowCtrls/floodlight-install.tar.gz" install_path="/local"/>
-<install install_path="/local" url="http://www.gpolab.bbn.com/experiment-support/OpenFlowCtrls/pox-install.tar.gz"/>
-<install install_path="/local" url="http://www.gpolab.bbn.com/experiment-support/OpenFlowOVS/wireshark.tar.gz"/>
-<install xmlns="http://www.geni.net/resources/rspec/3" url="http://www.gpolab.bbn.com/experiment-support/OpenFlowCtrls/ryu-install.tar.gz" install_path="/local"/>
-<install xmlns="http://www.geni.net/resources/rspec/3" url="http://www.gpolab.bbn.com/experiment-support/OpenFlowCtrls/floodlight-install.tar.gz" install_path="/local"/>
+<install xmlns="http://www.geni.net/resources/rspec/3" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/OpenFlowOVS/floodlight-install.tar.gz" install_path="/local"/>
+<install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/OpenFlowOVS/pox-install.tar.gz"/>
+<install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/OpenFlowOVS/wireshark.tar.gz"/>
+<install xmlns="http://www.geni.net/resources/rspec/3" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/OpenFlowOVS/ryu-install.tar.gz" install_path="/local"/>
+<install xmlns="http://www.geni.net/resources/rspec/3" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/OpenFlowOVS/floodlight-install.tar.gz" install_path="/local"/>
 </services>
     <flack:node_info xmlns:flack="http://www.protogeni.net/resources/rspec/ext/flack/1" x="441" y="148" unbound="true"/>
   
-<icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="http://www.gpolab.bbn.com/experiment-support/logos/of-ctrl.png"/>
+<icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/GRAPHICS/of-ctrl.png"/>
 <site xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" id="Site 1"/>
 </node>
 </rspec>
