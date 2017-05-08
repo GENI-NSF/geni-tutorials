@@ -22,6 +22,8 @@ The **geni-tutorials** repository includes supporting files used for [GENI Tutor
  
 - **OpenFlowHW/pvtVlan**: Contains files required for the [OpenFlow using a Hardware Switch Tutorial](http://groups.geni.net/geni/wiki/GENIExperimenter/Tutorials/OpenFlowOVS-Floodlight/HW/DesignSetup), which guides experimenter through a Floodlight Controller experiment using a Hardwas Switch in InstaGENI racks.
 
+- ** OpenFlowNetworkDeviceFirewall**: Contains supporting files for the [OpenFlow Network Devices Firewall Exercise](http://groups.geni.net/geni/wiki/GENIExperimenter/Tutorials/OpenFlowNetworkDevices/Firewall).
+
 - **PingPlus**: Contains files required for the [Layer 2 Ping Experiment](http://groups.geni.net/geni/wiki/Tutorials/Layer2Ping/Procedure), which shows how to run a Layer 2 ping between hosts and optionally modify the program to do measurements. 
  
 - **StitchingTutorial**: Contains files required for the [GENI VLAN Stitching Tutorial](http://groups.geni.net/geni/wiki/GENIExperimenter/Tutorials/StitchingTutorial), which guides experimenter through an example where local and stiched VLAN performance is compared.
