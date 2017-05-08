@@ -28,6 +28,8 @@ The **geni-tutorials** repository includes supporting files used for [GENI Tutor
  
 - **StitchingTutorial**: Contains files required for the [GENI VLAN Stitching Tutorial](http://groups.geni.net/geni/wiki/GENIExperimenter/Tutorials/StitchingTutorial), which guides experimenter through an example where local and stiched VLAN performance is compared.
  
+ - **SystematicExprCaseStudy**: Contains files required for the [Systematic Experimental Design Tutorial](http://groups.geni.net/geni/wiki/GENIExperimenter/Tutorials/SystematicExprCaseStudy).
+ 
 - **WebServer**: Contains files required for the [Running a WebServer experiment](http://groups.geni.net/geni/wiki/WebServerExample), which guides experimenter through an assignment to build a functional web server, the basics of distributed programming, client/server structures, and issues in building high performance servers.  
 
 - **GRAPHICS**: Commonly used graphics to keep a consistent presentation for GENI tutorials.
