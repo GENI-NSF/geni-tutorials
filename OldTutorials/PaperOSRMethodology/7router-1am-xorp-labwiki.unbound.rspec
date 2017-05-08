@@ -1,3 +1,23 @@
+<!--
+Copyright (c) 2017 Raytheon BBN Technologies
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this 
+software and/or hardware specification (the “Work”) to deal in the Work without 
+restriction, including without limitation the rights to use, copy, modify, merge, 
+publish, distribute, sublicense, and/or sell copies of the Work, and to permit 
+persons to whom the Work is furnished to do so, subject to the following conditions:  
+
+The above copyright notice and this permission notice shall be included in all 
+copies or substantial portions of the Work.  
+
+THE WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT 
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION 
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE WORK 
+OR THE USE OR OTHER DEALINGS IN THE WORK. 
+-->
+
 <rspec type="request" generated_by="Flack" generated="2014-06-21T15:03:02Z" xsi:schemaLocation="http://www.geni.net/resources/rspec/3 http://www.geni.net/resources/rspec/3/request.xsd " xmlns:flack="http://www.protogeni.net/resources/rspec/ext/flack/1" xmlns:client="http://www.protogeni.net/resources/rspec/ext/client/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.geni.net/resources/rspec/3">
   <node client_id="server" exclusive="false">
     <vnode name="pcvm3-23" xmlns="http://www.protogeni.net/resources/rspec/ext/emulab/1"/>
@@ -7,7 +27,7 @@
     </sliver_type>
     <services>
       <execute command="/bin/bash /local/install_script/initial_install.sh" shell="bash"/>
-      <install install_path="/local" url="http://www.gpolab.bbn.com/exp/sysexpr/install_script.tar.gz"/>
+      <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/PaperOSRMethodology/install_script.tar.gz"/>
       <install install_path="/" url="http://emmy9.casa.umass.edu/GEC-20/gimidev.tar.gz"/>
     </services>
     <interface client_id="xen:if0">
@@ -22,7 +42,7 @@
     </sliver_type>
     <services>
       <execute command="/bin/bash /local/install_script/initial_install.sh" shell="bash"/>
-      <install install_path="/local" url="http://www.gpolab.bbn.com/exp/sysexpr/install_script.tar.gz"/>
+      <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/PaperOSRMethodology/install_script.tar.gz"/>
       <install install_path="/" url="http://emmy9.casa.umass.edu/GEC-20/gimidev.tar.gz"/>
     </services>
     <interface client_id="xen-0:if0">
@@ -37,10 +57,10 @@
     </sliver_type>
     <services>
       <execute command="/bin/bash /local/xorp_autostart/start-xorp.sh" shell="bash"/>
-      <install install_path="/local" url="http://www.gpolab.bbn.com/exp/sysexpr/xorp_autostart.tar.gz"/>
-      <install install_path="/local" url="http://www.gpolab.bbn.com/exp/sysexpr/xorp_run.tar.gz"/>
+      <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/PaperOSRMethodology/xorp_autostart.tar.gz"/>
+      <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/PaperOSRMethodology/xorp_run.tar.gz"/>
       <install install_path="/" url="http://emmy9.casa.umass.edu/GEC-20/gimidev.tar.gz"/>
-      <install install_path="/local" url="http://www.gpolab.bbn.com/exp/sysexpr/labwiki.tar.gz"/>
+      <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/PaperOSRMethodology/labwiki.tar.gz"/>
     </services>
     <interface client_id="xen-1:if0">
       <ip address="192.168.3.2" netmask="255.255.255.0" type="ipv4"/>
@@ -63,10 +83,10 @@
     </sliver_type>
     <services>
       <execute command="/bin/bash /local/xorp_autostart/start-xorp.sh" shell="bash"/>
-      <install install_path="/local" url="http://www.gpolab.bbn.com/exp/sysexpr/xorp_autostart.tar.gz"/>
-      <install install_path="/local" url="http://www.gpolab.bbn.com/exp/sysexpr/xorp_run.tar.gz"/>
+      <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/PaperOSRMethodology/xorp_autostart.tar.gz"/>
+      <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/PaperOSRMethodology/xorp_run.tar.gz"/>
       <install install_path="/" url="http://emmy9.casa.umass.edu/GEC-20/gimidev.tar.gz"/>
-      <install install_path="/local" url="http://www.gpolab.bbn.com/exp/sysexpr/labwiki.tar.gz"/>
+      <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/PaperOSRMethodology/labwiki.tar.gz"/>
     </services>
     <interface client_id="xen-2:if0">
       <ip address="10.10.3.2" netmask="" type="ipv4"/>
@@ -86,10 +106,10 @@
     </sliver_type>
     <services>
       <execute command="/bin/bash /local/xorp_autostart/start-xorp.sh" shell="bash"/>
-      <install install_path="/local" url="http://www.gpolab.bbn.com/exp/sysexpr/xorp_autostart.tar.gz"/>
-      <install install_path="/local" url="http://www.gpolab.bbn.com/exp/sysexpr/xorp_run.tar.gz"/>
+      <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/PaperOSRMethodology/xorp_autostart.tar.gz"/>
+      <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/PaperOSRMethodology/xorp_run.tar.gz"/>
       <install install_path="/" url="http://emmy9.casa.umass.edu/GEC-20/gimidev.tar.gz"/>
-      <install install_path="/local" url="http://www.gpolab.bbn.com/exp/sysexpr/labwiki.tar.gz"/>
+      <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/PaperOSRMethodology/labwiki.tar.gz"/>
     </services>
     <interface client_id="xen-3:if0">
       <ip address="192.168.2.2" netmask="255.255.255.0" type="ipv4"/>
@@ -109,10 +129,10 @@
     </sliver_type>
     <services>
       <execute command="/bin/bash /local/xorp_autostart/start-xorp.sh" shell="bash"/>
-      <install install_path="/local" url="http://www.gpolab.bbn.com/exp/sysexpr/xorp_autostart.tar.gz"/>
-      <install install_path="/local" url="http://www.gpolab.bbn.com/exp/sysexpr/xorp_run.tar.gz"/>
+      <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/PaperOSRMethodology/xorp_autostart.tar.gz"/>
+      <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/PaperOSRMethodology/xorp_run.tar.gz"/>
       <install install_path="/" url="http://emmy9.casa.umass.edu/GEC-20/gimidev.tar.gz"/>
-      <install install_path="/local" url="http://www.gpolab.bbn.com/exp/sysexpr/labwiki.tar.gz"/>
+      <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/PaperOSRMethodology/labwiki.tar.gz"/>
     </services>
     <interface client_id="xen-4:if0">
       <ip address="192.168.10.100" netmask="255.255.255.0" type="ipv4"/>
@@ -132,10 +152,10 @@
     </sliver_type>
     <services>
       <execute command="/bin/bash /local/xorp_autostart/start-xorp.sh" shell="bash"/>
-      <install install_path="/local" url="http://www.gpolab.bbn.com/exp/sysexpr/xorp_autostart.tar.gz"/>
-      <install install_path="/local" url="http://www.gpolab.bbn.com/exp/sysexpr/xorp_run.tar.gz"/>
+      <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/PaperOSRMethodology/xorp_autostart.tar.gz"/>
+      <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/PaperOSRMethodology/xorp_run.tar.gz"/>
       <install install_path="/" url="http://emmy9.casa.umass.edu/GEC-20/gimidev.tar.gz"/>
-      <install install_path="/local" url="http://www.gpolab.bbn.com/exp/sysexpr/labwiki.tar.gz"/>
+      <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/PaperOSRMethodology/labwiki.tar.gz"/>
     </services>
     <interface client_id="xen-5:if0">
       <ip address="192.168.4.2" netmask="255.255.255.0" type="ipv4"/>
@@ -152,10 +172,10 @@
     </sliver_type>
     <services>
       <execute command="/bin/bash /local/xorp_autostart/start-xorp.sh" shell="bash"/>
-      <install install_path="/local" url="http://www.gpolab.bbn.com/exp/sysexpr/xorp_autostart.tar.gz"/>
-      <install install_path="/local" url="http://www.gpolab.bbn.com/exp/sysexpr/xorp_run.tar.gz"/>
+      <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/PaperOSRMethodology/xorp_autostart.tar.gz"/>
+      <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/PaperOSRMethodology/xorp_run.tar.gz"/>
       <install install_path="/" url="http://emmy9.casa.umass.edu/GEC-20/gimidev.tar.gz"/>
-      <install install_path="/local" url="http://www.gpolab.bbn.com/exp/sysexpr/labwiki.tar.gz"/>
+      <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/PaperOSRMethodology/labwiki.tar.gz"/>
     </services>
     <interface client_id="xen-6:if0">
       <ip address="192.168.1.2" netmask="255.255.255.0" type="ipv4"/>
@@ -175,10 +195,10 @@
     </sliver_type>
     <services>
       <execute command="/bin/bash /local/xorp_autostart/start-xorp.sh" shell="bash"/>
-      <install install_path="/local" url="http://www.gpolab.bbn.com/exp/sysexpr/xorp_autostart.tar.gz"/>
-      <install install_path="/local" url="http://www.gpolab.bbn.com/exp/sysexpr/xorp_run.tar.gz"/>
+      <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/PaperOSRMethodology/xorp_autostart.tar.gz"/>
+      <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/PaperOSRMethodology/xorp_run.tar.gz"/>
       <install install_path="/" url="http://emmy9.casa.umass.edu/GEC-20/gimidev.tar.gz"/>
-      <install install_path="/local" url="http://www.gpolab.bbn.com/exp/sysexpr/labwiki.tar.gz"/>
+      <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/PaperOSRMethodology/labwiki.tar.gz"/>
     </services>
     <interface client_id="xen-7:if0">
       <ip address="192.168.7.2" netmask="255.255.255.0" type="ipv4"/>
