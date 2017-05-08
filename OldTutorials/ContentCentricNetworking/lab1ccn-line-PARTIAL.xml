@@ -1,0 +1,96 @@
+<rspec xmlns="http://www.geni.net/resources/rspec/3" xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" xmlns:tour="http://www.protogeni.net/resources/rspec/ext/apt-tour/1" xmlns:jacks="http://www.protogeni.net/resources/rspec/ext/jacks/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.geni.net/resources/rspec/3    http://www.geni.net/resources/rspec/3/request.xsd" type="request">
+<node client_id="collab" exclusive="false">
+    <sliver_type name="emulab-xen">
+      <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU14-64-STD"/>
+    </sliver_type>
+    <interface client_id="collab:rschr">
+    </interface>
+  <site xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" id="Site 4"/>
+</node>
+<node client_id="dsrc" exclusive="false">
+    <sliver_type name="emulab-xen">
+      <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU14-64-STD"/>
+    </sliver_type>
+    <services>
+      
+      
+      
+      
+      
+      
+            
+      
+    <execute command="cd /tmp/ccnx-setup &amp;&amp; ./node-setup" shell="sh"/>
+<execute command="cd /tmp/ccnx-setup &amp;&amp; ./add-precip-routes dsrc" shell="sh"/>
+<execute command="cd /tmp/ccnx-setup &amp;&amp; ./ccnx-setup router 4" shell="sh"/>
+<execute command="cd /tmp/ccnx-setup &amp;&amp; ./atmos-server pr_19020101_060000.nc" shell="sh"/>
+<install install_path="/" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/ContentCentricNetworking/ccnx-0.6.2.tar.gz"/>
+<install install_path="/" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/ContentCentricNetworking/ccnx-atmos.tar.gz"/>
+<install install_path="/tmp" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/ContentCentricNetworking/ccnx-setup.tar.gz"/>
+<install install_path="/tmp" url="http://www.cs.purdue.edu/homes/fahmy/geni/tarballs/atmos-data1.tar"/>
+</services>
+    <interface client_id="dsrc1:router">
+    </interface>
+  <site xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" id="Site 4"/>
+</node>
+<node client_id="router" exclusive="false">
+    <sliver_type name="emulab-xen">
+      <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU14-64-STD"/>
+    </sliver_type>
+    <services>
+      
+      
+      
+      
+      
+             
+    <execute command="cd /tmp/ccnx-setup &amp;&amp; ./node-setup" shell="sh"/>
+<execute command="cd /tmp/ccnx-setup &amp;&amp; ./add-precip-routes dsrc" shell="sh"/>
+<execute command="cd /tmp/ccnx-setup &amp;&amp; ./ccnx-setup router 4" shell="sh"/>
+<install install_path="/" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/ContentCentricNetworking/ccnx-0.6.2.tar.gz"/>
+<install install_path="/" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/ContentCentricNetworking/ccnx-atmos.tar.gz"/>
+<install install_path="/tmp" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/ContentCentricNetworking/ccnx-setup.tar.gz"/>
+</services>
+    <interface client_id="router:rschr">
+    </interface>
+    <interface client_id="router:dsrc1">
+    </interface>
+  <site xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" id="Site 4"/>
+</node>
+<node client_id="rsrchr" exclusive="false">
+    <sliver_type name="emulab-xen">
+      <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU14-64-STD"/>
+    </sliver_type>
+    <services>
+      
+      
+      
+      
+      
+      
+              <execute command="cd /tmp/ccnx-setup &amp;&amp; ./node-setup" shell="sh"/>
+<execute command="cd /tmp/ccnx-setup &amp;&amp; ./add-precip-routes dsrc" shell="sh"/>
+<execute command="cd /tmp/ccnx-setup &amp;&amp; ./ccnx-setup router 4" shell="sh"/>
+<install install_path="/" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/ContentCentricNetworking/ccnx-0.6.2.tar.gz"/>
+<install install_path="/" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/ContentCentricNetworking/ccnx-atmos.tar.gz"/>
+<install install_path="/tmp" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OldTutorials/ContentCentricNetworking/ccnx-setup.tar.gz"/>
+</services>
+    <interface client_id="rschr:router">
+    </interface>
+    <interface client_id="rschr:collab">
+    </interface>
+  <site xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" id="Site 4"/>
+</node>
+<link client_id="rschr-router">
+    <interface_ref client_id="rschr:router"/>
+    <interface_ref client_id="router:rschr"/>
+  </link>
+<link client_id="collab-rschr">
+    <interface_ref client_id="collab:rschr"/>
+    <interface_ref client_id="rschr:collab"/>
+  </link>
+<link client_id="router-dsrc1">
+    <interface_ref client_id="dsrc1:router"/>
+    <interface_ref client_id="router:dsrc1"/>
+  </link>
+</rspec>
