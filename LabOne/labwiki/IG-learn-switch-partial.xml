@@ -1,0 +1,113 @@
+<!--
+Copyright (c) 2017 Raytheon BBN Technologies
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this 
+software and/or hardware specification (the “Work”) to deal in the Work without 
+restriction, including without limitation the rights to use, copy, modify, merge, 
+publish, distribute, sublicense, and/or sell copies of the Work, and to permit 
+persons to whom the Work is furnished to do so, subject to the following conditions:  
+
+The above copyright notice and this permission notice shall be included in all 
+copies or substantial portions of the Work.  
+
+THE WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT 
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION 
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE WORK 
+OR THE USE OR OTHER DEALINGS IN THE WORK. 
+-->
+
+<rspec type="request" generated_by="Flack" generated="2014-04-20T21:43:56Z" xsi:schemaLocation="http://www.geni.net/resources/rspec/3 http://www.geni.net/resources/rspec/3/request.xsd " xmlns:flack="http://www.protogeni.net/resources/rspec/ext/flack/1" xmlns:client="http://www.protogeni.net/resources/rspec/ext/client/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.geni.net/resources/rspec/3">
+  <node client_id="switch" exclusive="false">
+    <sliver_type name="emulab-xen">
+      <disk_image name="https://www.instageni.nysernet.org/image_metadata.php?uuid=6fb540af-53fb-11e4-9270-000000000000"/>
+    </sliver_type>
+    <services>
+       
+    	<execute command="sudo sh /gimiovs/gimibot.sh" shell="sh"/>
+        <install install_path="/" url="http://emmy9.casa.umass.edu/GEC-20/gimiovs.tar.gz"/>
+    </services>
+    <interface client_id="VM:if0">
+      <ip address="192.168.1.1" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+    <interface client_id="VM:if1">
+      <ip address="192.168.1.2" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+    <interface client_id="VM:if2">
+      <ip address="192.168.1.3" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+    <interface client_id="switch:if0">
+      <ip address="192.168.1.4" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+  </node>
+  <node client_id="nodea" exclusive="false">
+    <sliver_type name="emulab-xen">
+      <disk_image name="https://www.instageni.illinois.edu/image_metadata.php?uuid=03c883b6-53f9-11e4-9608-000000000000"/>
+    </sliver_type>
+    <services>
+      <execute command="sudo sh /gimidev/gimibot.sh" shell="sh"/>
+      <install install_path="/" url="http://emmy9.casa.umass.edu/GEC-20/gimidev.tar.gz"/>
+    </services>
+    <interface client_id="VM-0:if0">
+      <ip address="192.168.1.6" netmask="255.255.255.0" type="ipv4"/> 
+    </interface> 
+  </node>
+  <node client_id="nodeb" exclusive="false">
+    <sliver_type name="emulab-xen">
+      <disk_image name="https://www.instageni.illinois.edu/image_metadata.php?uuid=03c883b6-53f9-11e4-9608-000000000000"/>
+    </sliver_type>
+    <services>
+      <execute command="sudo sh /gimidev/gimibot.sh" shell="sh"/>
+
+      <install install_path="/" url="http://emmy9.casa.umass.edu/GEC-20/gimidev.tar.gz"/>
+    </services>
+    <interface client_id="VM-1:if0">
+      <ip address="192.168.1.7" netmask="255.255.255.0" type="ipv4"/> 
+    </interface> 
+  </node>
+  <node client_id="nodec" exclusive="false">
+    <sliver_type name="emulab-xen">
+      <disk_image name="https://www.instageni.illinois.edu/image_metadata.php?uuid=03c883b6-53f9-11e4-9608-000000000000"/>
+    </sliver_type>
+    <services>
+      <execute command="sudo sh /gimidev/gimibot.sh" shell="sh"/>
+      <install install_path="/" url="http://emmy9.casa.umass.edu/GEC-20/gimidev.tar.gz"/>
+    </services>
+    <interface client_id="VM-2:if0">
+      <ip address="192.168.1.8" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+  </node>
+  <node client_id="noded" exclusive="false">
+    <sliver_type name="emulab-xen">
+      <disk_image name="https://www.instageni.illinois.edu/image_metadata.php?uuid=03c883b6-53f9-11e4-9608-000000000000"/>
+    </sliver_type>
+    <interface client_id="VM:if3">
+      <ip address="192.168.1.9" netmask="255.255.255.0" type="ipv4"/>
+    </interface>
+  </node>
+  <link client_id="link0">
+    <interface_ref client_id="VM-0:if0"/>
+    <interface_ref client_id="VM:if0"/>
+    <property source_id="VM-0:if0" dest_id="VM:if0"/>
+    <property source_id="VM:if0" dest_id="VM-0:if0"/>  
+  </link>
+  <link client_id="link1">
+    <interface_ref client_id="VM-1:if0"/>
+    <interface_ref client_id="VM:if1"/>
+    <property source_id="VM-1:if0" dest_id="VM:if0"/>
+    <property source_id="VM:if0" dest_id="VM-1:if0"/>
+  </link>
+  <link client_id="link2">
+    <interface_ref client_id="VM-2:if0"/>
+    <interface_ref client_id="VM:if2"/>
+    <property source_id="VM-2:if0" dest_id="VM:if2"/>
+    <property source_id="VM:if2" dest_id="VM-2:if0"/> 
+  </link>
+  <link client_id="link3">
+    <interface_ref client_id="VM:if3"/>
+    <interface_ref client_id="switch:if0"/>
+    <property source_id="VM:if3" dest_id="switch:if0"/>
+    <property source_id="switch:if0" dest_id="VM:if3"/>
+  </link>
+</rspec>
