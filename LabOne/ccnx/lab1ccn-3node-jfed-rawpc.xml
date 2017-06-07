@@ -1,0 +1,91 @@
+<!--
+Copyright (c) 2017 Raytheon BBN Technologies
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this 
+software and/or hardware specification (the “Work”) to deal in the Work without 
+restriction, including without limitation the rights to use, copy, modify, merge, 
+publish, distribute, sublicense, and/or sell copies of the Work, and to permit 
+persons to whom the Work is furnished to do so, subject to the following conditions:  
+
+The above copyright notice and this permission notice shall be included in all 
+copies or substantial portions of the Work.  
+
+THE WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT 
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION 
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE WORK 
+OR THE USE OR OTHER DEALINGS IN THE WORK. 
+-->
+
+<rspec xmlns="http://www.geni.net/resources/rspec/3" xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" xmlns:tour="http://www.protogeni.net/resources/rspec/ext/apt-tour/1" xmlns:jacks="http://www.protogeni.net/resources/rspec/ext/jacks/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.geni.net/resources/rspec/3    http://www.geni.net/resources/rspec/3/request.xsd" type="request">
+<node client_id="data" exclusive="false">
+    <sliver_type name="raw-pc">
+      <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU14-64-STD"/>
+    </sliver_type>
+    <services>
+<execute command="cd /tmp/ccnx-setup &amp;&amp; ./node-setup" shell="sh"/>
+<execute command="cd /tmp/ccnx-setup &amp;&amp; ./add-precip-routes " shell="sh"/>
+<execute command="cd /tmp/ccnx-setup &amp;&amp; ./ccnx-setup router 3" shell="sh"/>
+<execute command="cd /tmp/ccnx-setup &amp;&amp; ./atmos-server pr_19020101_060000.nc" shell="sh"/>
+<install install_path="/" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/LabOne/ccnx/ccnx-0.6.2.tar.gz"/>
+<install install_path="/" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/LabOne/ccnx/ccnx-atmos.tar.gz"/>
+<install install_path="/tmp" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/LabOne/ccnx/ccnx-setup.tar.gz"/>
+<install install_path="/tmp" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/LabOne/ccnx/atmos-data1.tar"/>
+</services>
+    <interface client_id="dsrc1:router">
+    </interface>
+  
+<icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/GRAPHICS/RainData.png"/>
+<site xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" id="Site 3"/>
+</node>
+<node client_id="router" exclusive="false">
+    <sliver_type name="raw-pc">
+      <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU14-64-STD"/>
+    </sliver_type>
+    <services>
+<execute command="cd /tmp/ccnx-setup &amp;&amp; ./node-setup" shell="sh"/>
+<execute command="cd /tmp/ccnx-setup &amp;&amp; ./add-precip-routes data" shell="sh"/>
+<execute command="cd /tmp/ccnx-setup &amp;&amp; ./ccnx-setup router 3" shell="sh"/>
+<install install_path="/" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/LabOne/ccnx/ccnx-0.6.2.tar.gz"/>
+<install install_path="/" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/LabOne/ccnx/ccnx-atmos.tar.gz"/>
+<install install_path="/tmp" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/LabOne/ccnx/ccnx-setup.tar.gz"/>
+</services>
+    
+    <interface client_id="router:dsrc1">
+    </interface>
+  
+<icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://portal.geni.net/images/router.svg"/>
+
+<interface xmlns="http://www.geni.net/resources/rspec/3" client_id="interface-0"/>
+
+<site xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" id="Site 3"/>
+</node>
+<node client_id="user" exclusive="false">
+    <sliver_type name="raw-pc">
+      <disk_image name="urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU14-64-STD"/>
+    </sliver_type>
+    <services>
+<execute command="cd /tmp/ccnx-setup &amp;&amp; ./node-setup" shell="sh"/>
+<execute command="cd /tmp/ccnx-setup &amp;&amp; ./add-precip-routes router" shell="sh"/>
+<execute command="cd /tmp/ccnx-setup &amp;&amp; ./ccnx-setup router 3" shell="sh"/>
+<install install_path="/" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/LabOne/ccnx/ccnx-0.6.2.tar.gz"/>
+<install install_path="/" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/LabOne/ccnx/ccnx-atmos.tar.gz"/>
+<install install_path="/tmp" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/LabOne/ccnx/ccnx-setup.tar.gz"/>
+</services>
+  
+<icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/GRAPHICS/CoffeeWoman.png"/>
+<interface xmlns="http://www.geni.net/resources/rspec/3" client_id="interface-1"/>
+<site xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" id="Site 3"/>
+</node>
+<link client_id="router-dsrc1">
+    <interface_ref client_id="dsrc1:router"/>
+    <interface_ref client_id="router:dsrc1"/>
+  
+</link>
+<link xmlns="http://www.geni.net/resources/rspec/3" client_id="link-0">
+<interface_ref xmlns="http://www.geni.net/resources/rspec/3" client_id="interface-0"/>
+<interface_ref xmlns="http://www.geni.net/resources/rspec/3" client_id="interface-1"/>
+
+</link>
+</rspec>
