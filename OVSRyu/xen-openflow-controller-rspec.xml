@@ -22,7 +22,6 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
 <node xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="controller" exclusive="false">
     <emulab:routable_control_ip/>
     <emulab:vnode xmlns:rs="http://www.protogeni.net/resources/rspec/ext/emulab/1" name="pcvm1-3"/>
-    <emulab:routable_control_ip/>
     <sliver_type name="default-vm"/>
 <services>
 <execute command="sudo /local/install-script-ryu.sh" shell="sh"/>
