@@ -18,11 +18,11 @@ The **geni-tutorials** repository includes supporting files used for [GENI Tutor
 
 - **OVSRyu**: Contains files required for the [Intro to OpenFlow Tutorial with Ryu Controller Experiment](http://groups.geni.net/geni/wiki/GENIExperimenter/Tutorials/OpenFlowRyu), which guides experimenters through [OpenFlow](https://www.opennetworking.org/sdn-resources/openflow) Controller capabilities using [Open VSwitch (OVS)](https://www.sdxcentral.com/cloud/open-source/definitions/what-is-open-vswitch/) .
 
-- **OpenFlowCtrls**: Contains installation files for various OpenFlow Controllers.
+- **OpenFlowCtrls**: Contains RSpec that deliver the OpenFlow Controllers Ryu, FloodLight and POX.  All are installed and ready to run.
  
-- **OpenFlowHW/pvtVlan**: Contains files required for the [OpenFlow using a Hardware Switch Tutorial](http://groups.geni.net/geni/wiki/GENIExperimenter/Tutorials/OpenFlowOVS-Floodlight/HW/DesignSetup), which guides experimenter through a Floodlight Controller experiment using a Hardwas Switch in InstaGENI racks.
+- **OpenFlowHW/FloodLight**: Contains files required for the [OpenFlow using a Hardware Switch Tutorial](http://groups.geni.net/geni/wiki/GENIExperimenter/Tutorials/OpenFlowOVS-Floodlight/HW/DesignSetup), which guides experimenter through a Floodlight Controller experiment using a Hardware Switch in InstaGENI racks.
 
-- ** OpenFlowNetworkDeviceFirewall**: Contains supporting files for the [OpenFlow Network Devices Firewall Exercise](http://groups.geni.net/geni/wiki/GENIExperimenter/Tutorials/OpenFlowNetworkDevices/Firewall). A second variation of this [OpenFlow Firewall exercise](http://groups.geni.net/geni/wiki/GENIExperimenter/Tutorials/OpenFlowOVS/FirewallExecute) is available.
+- **OpenFlowNetworkDeviceFirewall**: Contains supporting files for the [OpenFlow Network Devices Firewall Exercise](http://groups.geni.net/geni/wiki/GENIExperimenter/Tutorials/OpenFlowNetworkDevices/Firewall). A second variation of this [OpenFlow Firewall exercise](http://groups.geni.net/geni/wiki/GENIExperimenter/Tutorials/OpenFlowOVS/FirewallExecute) is available.
 
 - **PingPlus**: Contains files required for the [Layer 2 Ping Experiment](http://groups.geni.net/geni/wiki/Tutorials/Layer2Ping/Procedure), which shows how to run a Layer 2 ping between hosts and optionally modify the program to do measurements. 
  
