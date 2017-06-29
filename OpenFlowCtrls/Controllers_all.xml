@@ -1,0 +1,35 @@
+<!--
+Copyright (c) 2017 Raytheon BBN Technologies
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this 
+software and/or hardware specification (the “Work”) to deal in the Work without 
+restriction, including without limitation the rights to use, copy, modify, merge, 
+publish, distribute, sublicense, and/or sell copies of the Work, and to permit 
+persons to whom the Work is furnished to do so, subject to the following conditions:  
+
+The above copyright notice and this permission notice shall be included in all 
+copies or substantial portions of the Work.  
+
+THE WORK IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, 
+INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT 
+HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION 
+OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE WORK 
+OR THE USE OR OTHER DEALINGS IN THE WORK. 
+-->
+
+<rspec xmlns="http://www.geni.net/resources/rspec/3" xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" xmlns:tour="http://www.protogeni.net/resources/rspec/ext/apt-tour/1" xmlns:jacks="http://www.protogeni.net/resources/rspec/ext/jacks/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.geni.net/resources/rspec/3    http://www.geni.net/resources/rspec/3/request.xsd" type="request">
+  <node xmlns="http://www.geni.net/resources/rspec/3" client_id="Controller">
+    <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://portal.geni.net/images/Xen-VM.svg"/>
+    <nomac xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1"/>
+    <routable_control_ip xmlns="http://www.protogeni.net/resources/rspec/ext/emulab/1"/>
+    <sliver_type xmlns="http://www.geni.net/resources/rspec/3" name="emulab-xen">
+      <disk_image xmlns="http://www.geni.net/resources/rspec/3" name="urn:publicid:IDN+instageni.nysernet.org+image+ch-geni-net:ControllerAll" url="https://www.instageni.nysernet.org/image_metadata.php?uuid=d50c4cea-5b77-11e7-8c06-000000000000"/>
+    </sliver_type>    
+    <services>
+      <execute xmlns="http://www.geni.net/resources/rspec/3" command="sudo cp -r /local/* /tmp/" shell="/bin/sh"/>
+      <execute xmlns="http://www.geni.net/resources/rspec/3" command="sudo chmod -R 777 /tmp/*" shell="/bin/sh"/>
+    </services>
+    <site xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" id="Site 1"/>
+  </node>
+</rspec>
