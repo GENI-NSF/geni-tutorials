@@ -40,7 +40,7 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
       
     <execute xmlns="http://www.geni.net/resources/rspec/3" command="cd /local &amp;&amp; sudo chmod +x install_script.sh" shell="/bin/sh"/>
 <execute command="cd /local &amp;&amp; sudo ./install_script.sh" shell="/bin/sh"/>
-<install xmlns="http://www.geni.net/resources/rspec/3" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/LabOne/ndn/tutorialBundle.tar.gz" install_path="/local"/>
+<install xmlns="http://www.geni.net/resources/rspec/3" url="http://github.com/GENI-NSF/geni-tutorials/raw/master/LabOne/ndn/tutorialBundle.tar.gz" install_path="/local"/>
 </services>
 </node>
 <node client_id="Experimenter" exclusive="false">
@@ -52,7 +52,7 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
       <flack:interface_info xmlns:flack="http://www.protogeni.net/resources/rspec/ext/flack/1" addressBound="true" bound="false"/>
     </interface>
     <flack:node_info xmlns:flack="http://www.protogeni.net/resources/rspec/ext/flack/1" x="47" y="499" unbound="true"/>
-    <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/GRAPHICS/TestTubeGuy.png"/>
+    <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="http://github.com/GENI-NSF/geni-tutorials/raw/master/GRAPHICS/TestTubeGuy.png"/>
     <site xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" id="Site 1"/>
     <services xmlns="http://www.geni.net/resources/rspec/3">
       
@@ -60,7 +60,7 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
       
     <execute xmlns="http://www.geni.net/resources/rspec/3" command="cd /local &amp;&amp; sudo chmod +x install_script.sh" shell="/bin/sh"/>
 <execute command="cd /local &amp;&amp; sudo ./install_script.sh" shell="/bin/sh"/>
-<install xmlns="http://www.geni.net/resources/rspec/3" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/LabOne/ndn/tutorialBundle.tar.gz" install_path="/local"/>
+<install xmlns="http://www.geni.net/resources/rspec/3" url="http://github.com/GENI-NSF/geni-tutorials/raw/master/LabOne/ndn/tutorialBundle.tar.gz" install_path="/local"/>
 </services>
 </node>
 <node client_id="PI" exclusive="false">
@@ -72,7 +72,7 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
       <flack:interface_info xmlns:flack="http://www.protogeni.net/resources/rspec/ext/flack/1" addressBound="true" bound="false"/>
     </interface>
     <flack:node_info xmlns:flack="http://www.protogeni.net/resources/rspec/ext/flack/1" x="236" y="497" unbound="true"/>
-    <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/GRAPHICS/CoffeeWoman.png"/>
+    <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="http://github.com/GENI-NSF/geni-tutorials/raw/master/GRAPHICS/CoffeeWoman.png"/>
     <site xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" id="Site 1"/>
     <services xmlns="http://www.geni.net/resources/rspec/3">
       
@@ -80,7 +80,7 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
       
     <execute xmlns="http://www.geni.net/resources/rspec/3" command="cd /local &amp;&amp; sudo chmod +x install_script.sh" shell="/bin/sh"/>
 <execute command="cd /local &amp;&amp; sudo ./install_script.sh" shell="/bin/sh"/>
-<install xmlns="http://www.geni.net/resources/rspec/3" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/LabOne/ndn/tutorialBundle.tar.gz" install_path="/local"/>
+<install xmlns="http://www.geni.net/resources/rspec/3" url="http://github.com/GENI-NSF/geni-tutorials/raw/master/LabOne/ndn/tutorialBundle.tar.gz" install_path="/local"/>
 </services>
 </node>
 <node client_id="Internet-Router" exclusive="false">
@@ -104,7 +104,7 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
       
     <execute xmlns="http://www.geni.net/resources/rspec/3" command="cd /local &amp;&amp; sudo chmod +x install_script.sh" shell="/bin/sh"/>
 <execute command="cd /local &amp;&amp; sudo ./install_script.sh" shell="/bin/sh"/>
-<install xmlns="http://www.geni.net/resources/rspec/3" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/LabOne/ndn/tutorialBundle.tar.gz" install_path="/local"/>
+<install xmlns="http://www.geni.net/resources/rspec/3" url="http://github.com/GENI-NSF/geni-tutorials/raw/master/LabOne/ndn/tutorialBundle.tar.gz" install_path="/local"/>
 </services>
 </node>
 <node client_id="Custodian" exclusive="false">
@@ -122,7 +122,7 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
       
       
     <execute xmlns="http://www.geni.net/resources/rspec/3" command="cd /local &amp;&amp; sudo chmod +x install_script.sh" shell="/bin/sh"/>
-<install xmlns="http://www.geni.net/resources/rspec/3" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/LabOne/ndn/tutorialBundle.tar.gz" install_path="/local"/>
+<install xmlns="http://www.geni.net/resources/rspec/3" url="http://github.com/GENI-NSF/geni-tutorials/raw/master/LabOne/ndn/tutorialBundle.tar.gz" install_path="/local"/>
 </services>
 </node>
 <link client_id="lan0">
