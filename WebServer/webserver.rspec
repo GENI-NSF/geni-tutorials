@@ -27,7 +27,7 @@ IN THE WORK.
     <sliver_type name="default-vm">
     </sliver_type>
     <services>
-    <execute command="/local/webexample/websrv_init.sh" shell="sh"/><install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/WebServer/webexample.tar.gz"/></services> 
+    <execute command="/local/webexample/websrv_init.sh" shell="sh"/><install install_path="/local" url="https://www.instageni.uvm.edu/GENI-NSF/geni-tutorials/raw/master/WebServer/webexample.tar.gz"/></services> 
     <interface client_id="Server:if0"/>
     <interface client_id="Server:if1"/>
   <site xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" id="31"/><routable_control_ip xmlns="http://www.protogeni.net/resources/rspec/ext/emulab/1"/></node>
@@ -35,14 +35,14 @@ IN THE WORK.
 <node client_id="Client2" exclusive="false">
     <sliver_type name="default-vm"/>
     <services>
-    <execute command="/local/webexample/webcl_init.sh" shell="sh"/><install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/WebServer/webexample.tar.gz"/></services>
+    <execute command="/local/webexample/webcl_init.sh" shell="sh"/><install install_path="/local" url="https://www.instageni.uvm.edu/GENI-NSF/geni-tutorials/raw/master/WebServer/webexample.tar.gz"/></services>
     <interface client_id="Client2:if0"/>
   <site xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" id="31"/></node>
 
 <node client_id="Client1" exclusive="false">
     <sliver_type name="default-vm"/>
     <services>
-    <execute command="/local/webexample/webcl_init.sh" shell="sh"/><install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/WebServer/webexample.tar.gz"/></services>
+    <execute command="/local/webexample/webcl_init.sh" shell="sh"/><install install_path="/local" url="https://www.instageni.uvm.edu/GENI-NSF/geni-tutorials/raw/master/WebServer/webexample.tar.gz"/></services>
     <interface client_id="Client1:if0"/>
   <site xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" id="31"/></node>
 
