@@ -21,7 +21,7 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
 <rspec xmlns="http://www.geni.net/resources/rspec/3" xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" xmlns:tour="http://www.protogeni.net/resources/rspec/ext/apt-tour/1" xmlns:jacks="http://www.protogeni.net/resources/rspec/ext/jacks/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.geni.net/resources/rspec/3    http://www.geni.net/resources/rspec/3/request.xsd" type="request">
 <node client_id="Campus-Router" exclusive="false">
     <sliver_type name="emulab-xen">
-      <disk_image name="https://www.instageni.northwestern.edu/image_metadata.php?uuid=42a2494b-54de-11e4-8c68-000000000000"/>
+      <disk_image name="https://www.instageni.cs.princeton.edu/image_metadata.php?uuid=29d8b86e-3137-11e9-a1f8-000099989701"/>
     </sliver_type>
     <interface client_id="Campus-Router:if0">
       <ip address="10.0.0.1" netmask="255.255.255.0" type="ipv4"/>
@@ -45,7 +45,7 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
 </node>
 <node client_id="Experimenter" exclusive="false">
     <sliver_type name="emulab-xen">
-      <disk_image name="https://www.instageni.northwestern.edu/image_metadata.php?uuid=42a2494b-54de-11e4-8c68-000000000000"/>
+      <disk_image name="https://www.instageni.cs.princeton.edu/image_metadata.php?uuid=29d8b86e-3137-11e9-a1f8-000099989701"/>
     </sliver_type>
     <interface client_id="Experimenter:if0">
       <ip address="10.0.0.2" netmask="255.255.255.0" type="ipv4"/>
@@ -65,7 +65,7 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
 </node>
 <node client_id="PI" exclusive="false">
     <sliver_type name="emulab-xen">
-      <disk_image name="https://www.instageni.northwestern.edu/image_metadata.php?uuid=42a2494b-54de-11e4-8c68-000000000000"/>
+      <disk_image name="https://www.instageni.cs.princeton.edu/image_metadata.php?uuid=29d8b86e-3137-11e9-a1f8-000099989701"/>
     </sliver_type>
     <interface client_id="PI:if0">
       <ip address="10.0.0.3" netmask="255.255.255.0" type="ipv4"/>
@@ -85,7 +85,7 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
 </node>
 <node client_id="Internet-Router" exclusive="false">
     <sliver_type name="emulab-xen">
-      <disk_image name="https://www.instageni.northwestern.edu/image_metadata.php?uuid=42a2494b-54de-11e4-8c68-000000000000"/>
+      <disk_image name="https://www.instageni.cs.princeton.edu/image_metadata.php?uuid=29d8b86e-3137-11e9-a1f8-000099989701"/>
     </sliver_type>
     <interface client_id="Internet-Router:if0">
       <ip address="10.0.10.2" netmask="255.255.240.0" type="ipv4"/>
@@ -109,7 +109,7 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
 </node>
 <node client_id="Custodian" exclusive="false">
     <sliver_type name="emulab-xen">
-      <disk_image name="https://www.instageni.northwestern.edu/image_metadata.php?uuid=42a2494b-54de-11e4-8c68-000000000000"/>
+      <disk_image name="https://www.instageni.cs.princeton.edu/image_metadata.php?uuid=29d8b86e-3137-11e9-a1f8-000099989701"/>
     </sliver_type>
     <interface client_id="Custodian:if0">
       <ip address="10.0.20.2" netmask="255.255.224.0" type="ipv4"/>
