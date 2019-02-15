@@ -18,7 +18,7 @@ type="request">
 
 	<services>
 		<execute command="sudo /local/install-script-wireshark.sh" shell="sh"/>
-		<install install_path="/local" url="http://www.gpolab.bbn.com/experiment-support/OpenFlowOVS/wireshark.tar.gz"/>
+		<install install_path="/local" url="https://www.instageni.uvm.edu/GENI-NSF/geni-tutorials/raw/master/OVSRyu/wireshark.tar.gz"/>
 	</services>
 
 	<interface xmlns="http://www.geni.net/resources/rspec/3" client_id="OVS:if0">
@@ -71,7 +71,7 @@ type="request">
 	<services xmlns="http://www.geni.net/resources/rspec/3"/>
 	
 	<sliver_type xmlns="http://www.geni.net/resources/rspec/3" name="emulab-xen">
-      <disk_image xmlns="http://www.geni.net/resources/rspec/3" name="urn:publicid:IDN+instageni.nysernet.org+image+ch-geni-net:NFVsnort" url="https://www.instageni.nysernet.org/image_metadata.php?uuid=7661700c-0562-11e6-af99-000000000000"/>
+      <disk_image xmlns="http://www.geni.net/resources/rspec/3" name="urn:publicid:IDN+instageni.cs.princeton.edu+image+ch-geni-net:NFVsnort" url="https://www.instageni.cs.princeton.edu/image_metadata.php?uuid=bf702c3b-313b-11e9-a1f8-000099989701"/>
     </sliver_type>
     
 	<interface xmlns="http://www.geni.net/resources/rspec/3" client_id="VNF1:if0">
@@ -86,7 +86,7 @@ type="request">
 	<services xmlns="http://www.geni.net/resources/rspec/3"/>
 	
 	<sliver_type xmlns="http://www.geni.net/resources/rspec/3" name="emulab-xen">
-      <disk_image xmlns="http://www.geni.net/resources/rspec/3" name="urn:publicid:IDN+instageni.nysernet.org+image+ch-geni-net:NFVsnort" url="https://www.instageni.nysernet.org/image_metadata.php?uuid=7661700c-0562-11e6-af99-000000000000"/>
+      <disk_image xmlns="http://www.geni.net/resources/rspec/3" name="urn:publicid:IDN+instageni.cs.princeton.edu+image+ch-geni-net:NFVsnort" url="https://www.instageni.cs.princeton.edu/image_metadata.php?uuid=bf702c3b-313b-11e9-a1f8-000099989701"/>
     </sliver_type>
 	
 	<interface xmlns="http://www.geni.net/resources/rspec/3" client_id="VNF2:if0">
