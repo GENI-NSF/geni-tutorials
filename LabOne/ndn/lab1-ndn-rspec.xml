@@ -21,23 +21,17 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
 <rspec xmlns="http://www.geni.net/resources/rspec/3" xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1" xmlns:tour="http://www.protogeni.net/resources/rspec/ext/apt-tour/1" xmlns:jacks="http://www.protogeni.net/resources/rspec/ext/jacks/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.geni.net/resources/rspec/3    http://www.geni.net/resources/rspec/3/request.xsd" type="request">
 <node client_id="Campus-Router" exclusive="false">
     <sliver_type name="emulab-xen">
-      <disk_image name="https://www.instageni.cs.princeton.edu/image_metadata.php?uuid=29d8b86e-3137-11e9-a1f8-000099989701"/>
+      <disk_image name="urn:publicid:IDN+instageni.cs.princeton.edu+image+ch-geni-net:ndngec21v4" url="https://www.instageni.cs.princeton.edu/image_metadata.php?uuid=29d8b86e-3137-11e9-a1f8-000099989701"/>
     </sliver_type>
     <interface client_id="Campus-Router:if0">
       <ip address="10.0.0.1" netmask="255.255.255.0" type="ipv4"/>
-      <flack:interface_info xmlns:flack="http://www.protogeni.net/resources/rspec/ext/flack/1" addressBound="true" bound="false"/>
     </interface>
     <interface client_id="Campus-Router:if1">
       <ip address="10.0.10.1" netmask="255.255.240.0" type="ipv4"/>
-      <flack:interface_info xmlns:flack="http://www.protogeni.net/resources/rspec/ext/flack/1" addressBound="true" bound="false"/>
     </interface>
-    <flack:node_info xmlns:flack="http://www.protogeni.net/resources/rspec/ext/flack/1" x="148" y="332" unbound="true"/>
     <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://www.emulab.net/protogeni/jacks-stable/images/router.svg"/>
     <site xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" id="Site 1"/>
     <services xmlns="http://www.geni.net/resources/rspec/3">
-      
-      
-      
     <execute xmlns="http://www.geni.net/resources/rspec/3" command="cd /local &amp;&amp; sudo chmod +x install_script.sh" shell="/bin/sh"/>
 <execute command="cd /local &amp;&amp; sudo ./install_script.sh" shell="/bin/sh"/>
 <install xmlns="http://www.geni.net/resources/rspec/3" url="https://www.instageni.uvm.edu/GENI-NSF/geni-tutorials/raw/master/LabOne/ndn/tutorialBundle.tar.gz" install_path="/local"/>
@@ -45,19 +39,14 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
 </node>
 <node client_id="Experimenter" exclusive="false">
     <sliver_type name="emulab-xen">
-      <disk_image name="https://www.instageni.cs.princeton.edu/image_metadata.php?uuid=29d8b86e-3137-11e9-a1f8-000099989701"/>
+      <disk_image name="urn:publicid:IDN+instageni.cs.princeton.edu+image+ch-geni-net:ndngec21v4" url="https://www.instageni.cs.princeton.edu/image_metadata.php?uuid=29d8b86e-3137-11e9-a1f8-000099989701"/>
     </sliver_type>
     <interface client_id="Experimenter:if0">
       <ip address="10.0.0.2" netmask="255.255.255.0" type="ipv4"/>
-      <flack:interface_info xmlns:flack="http://www.protogeni.net/resources/rspec/ext/flack/1" addressBound="true" bound="false"/>
     </interface>
-    <flack:node_info xmlns:flack="http://www.protogeni.net/resources/rspec/ext/flack/1" x="47" y="499" unbound="true"/>
     <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="http://github.com/GENI-NSF/geni-tutorials/raw/master/GRAPHICS/TestTubeGuy.png"/>
     <site xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" id="Site 1"/>
     <services xmlns="http://www.geni.net/resources/rspec/3">
-      
-      
-      
     <execute xmlns="http://www.geni.net/resources/rspec/3" command="cd /local &amp;&amp; sudo chmod +x install_script.sh" shell="/bin/sh"/>
 <execute command="cd /local &amp;&amp; sudo ./install_script.sh" shell="/bin/sh"/>
 <install xmlns="http://www.geni.net/resources/rspec/3" url="https://www.instageni.uvm.edu/GENI-NSF/geni-tutorials/raw/master/LabOne/ndn/tutorialBundle.tar.gz" install_path="/local"/>
@@ -65,19 +54,14 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
 </node>
 <node client_id="PI" exclusive="false">
     <sliver_type name="emulab-xen">
-      <disk_image name="https://www.instageni.cs.princeton.edu/image_metadata.php?uuid=29d8b86e-3137-11e9-a1f8-000099989701"/>
+      <disk_image name="urn:publicid:IDN+instageni.cs.princeton.edu+image+ch-geni-net:ndngec21v4" url="https://www.instageni.cs.princeton.edu/image_metadata.php?uuid=29d8b86e-3137-11e9-a1f8-000099989701"/>
     </sliver_type>
     <interface client_id="PI:if0">
       <ip address="10.0.0.3" netmask="255.255.255.0" type="ipv4"/>
-      <flack:interface_info xmlns:flack="http://www.protogeni.net/resources/rspec/ext/flack/1" addressBound="true" bound="false"/>
     </interface>
-    <flack:node_info xmlns:flack="http://www.protogeni.net/resources/rspec/ext/flack/1" x="236" y="497" unbound="true"/>
     <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="http://github.com/GENI-NSF/geni-tutorials/raw/master/GRAPHICS/CoffeeWoman.png"/>
     <site xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" id="Site 1"/>
     <services xmlns="http://www.geni.net/resources/rspec/3">
-      
-      
-      
     <execute xmlns="http://www.geni.net/resources/rspec/3" command="cd /local &amp;&amp; sudo chmod +x install_script.sh" shell="/bin/sh"/>
 <execute command="cd /local &amp;&amp; sudo ./install_script.sh" shell="/bin/sh"/>
 <install xmlns="http://www.geni.net/resources/rspec/3" url="https://www.instageni.uvm.edu/GENI-NSF/geni-tutorials/raw/master/LabOne/ndn/tutorialBundle.tar.gz" install_path="/local"/>
@@ -85,23 +69,17 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
 </node>
 <node client_id="Internet-Router" exclusive="false">
     <sliver_type name="emulab-xen">
-      <disk_image name="https://www.instageni.cs.princeton.edu/image_metadata.php?uuid=29d8b86e-3137-11e9-a1f8-000099989701"/>
+      <disk_image name="urn:publicid:IDN+instageni.cs.princeton.edu+image+ch-geni-net:ndngec21v4" url="https://www.instageni.cs.princeton.edu/image_metadata.php?uuid=29d8b86e-3137-11e9-a1f8-000099989701"/>
     </sliver_type>
     <interface client_id="Internet-Router:if0">
       <ip address="10.0.10.2" netmask="255.255.240.0" type="ipv4"/>
-      <flack:interface_info xmlns:flack="http://www.protogeni.net/resources/rspec/ext/flack/1" addressBound="true" bound="false"/>
     </interface>
     <interface client_id="Internet-Router:if1">
       <ip address="10.0.20.1" netmask="255.255.224.0" type="ipv4"/>
-      <flack:interface_info xmlns:flack="http://www.protogeni.net/resources/rspec/ext/flack/1" addressBound="true" bound="false"/>
     </interface>
-    <flack:node_info xmlns:flack="http://www.protogeni.net/resources/rspec/ext/flack/1" x="527" y="330" unbound="true"/>
     <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://www.emulab.net/protogeni/jacks-stable/images/router.svg"/>
     <site xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" id="Site 1"/>
     <services xmlns="http://www.geni.net/resources/rspec/3">
-      
-      
-      
     <execute xmlns="http://www.geni.net/resources/rspec/3" command="cd /local &amp;&amp; sudo chmod +x install_script.sh" shell="/bin/sh"/>
 <execute command="cd /local &amp;&amp; sudo ./install_script.sh" shell="/bin/sh"/>
 <install xmlns="http://www.geni.net/resources/rspec/3" url="https://www.instageni.uvm.edu/GENI-NSF/geni-tutorials/raw/master/LabOne/ndn/tutorialBundle.tar.gz" install_path="/local"/>
@@ -109,18 +87,14 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
 </node>
 <node client_id="Custodian" exclusive="false">
     <sliver_type name="emulab-xen">
-      <disk_image name="https://www.instageni.cs.princeton.edu/image_metadata.php?uuid=29d8b86e-3137-11e9-a1f8-000099989701"/>
+      <disk_image name="urn:publicid:IDN+instageni.cs.princeton.edu+image+ch-geni-net:ndngec21v4" url="https://www.instageni.cs.princeton.edu/image_metadata.php?uuid=29d8b86e-3137-11e9-a1f8-000099989701"/>
     </sliver_type>
     <interface client_id="Custodian:if0">
       <ip address="10.0.20.2" netmask="255.255.224.0" type="ipv4"/>
-      <flack:interface_info xmlns:flack="http://www.protogeni.net/resources/rspec/ext/flack/1" addressBound="true" bound="false"/>
     </interface>
-    <flack:node_info xmlns:flack="http://www.protogeni.net/resources/rspec/ext/flack/1" x="530" y="500" unbound="true"/>
     <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://www.emulab.net/protogeni/jacks-stable/images/server.svg"/>
     <site xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" id="Site 1"/>
-    <services xmlns="http://www.geni.net/resources/rspec/3">
-      
-      
+    <services xmlns="http://www.geni.net/resources/rspec/3">      
     <execute xmlns="http://www.geni.net/resources/rspec/3" command="cd /local &amp;&amp; sudo chmod +x install_script.sh" shell="/bin/sh"/>
 <install xmlns="http://www.geni.net/resources/rspec/3" url="https://www.instageni.uvm.edu/GENI-NSF/geni-tutorials/raw/master/LabOne/ndn/tutorialBundle.tar.gz" install_path="/local"/>
 </services>
@@ -130,22 +104,18 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
     <interface_ref client_id="Campus-Router:if0"/>
     <interface_ref client_id="PI:if0"/>
     <link_type name="lan"/>
-    <flack:link_info xmlns:flack="http://www.protogeni.net/resources/rspec/ext/flack/1" x="-1" y="-1" unboundVlantag="true"/>
     <site xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" id="undefined"/>
   </link>
 <link client_id="lan1">
     <interface_ref client_id="Campus-Router:if1"/>
     <interface_ref client_id="Internet-Router:if0"/>
     <link_type name="lan"/>
-    <flack:link_info xmlns:flack="http://www.protogeni.net/resources/rspec/ext/flack/1" x="-1" y="-1" unboundVlantag="true"/>
     <site xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" id="undefined"/>
   </link>
 <link client_id="lan2">
     <interface_ref client_id="Internet-Router:if1"/>
     <interface_ref client_id="Custodian:if0"/>
     <link_type name="lan"/>
-    <flack:link_info xmlns:flack="http://www.protogeni.net/resources/rspec/ext/flack/1" x="-1" y="-1" unboundVlantag="true"/>
     <site xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" id="undefined"/>
   </link>
-<flack:slice_info xmlns:flack="http://www.protogeni.net/resources/rspec/ext/flack/1" view="graph"/>
 </rspec>
