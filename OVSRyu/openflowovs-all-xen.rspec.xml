@@ -54,7 +54,7 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
 </sliver_type>
  <services>
      <execute command="sudo /local/install-script-wireshark.sh" shell="sh"/>
-     <install install_path="/local" url="https://www.instageni.uvm.edu/GENI-NSF/geni-tutorials/raw/master/OVSRyu/wireshark.tar.gz"/>
+     <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OVSRyu/wireshark.tar.gz"/>
 </services>
 
 <interface xmlns="http://www.geni.net/resources/rspec/3" client_id="interface-1">

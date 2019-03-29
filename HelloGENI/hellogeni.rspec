@@ -33,7 +33,7 @@ IN THE WORK.
     <sliver_type name="default-vm"/>
     <emulab:routable_control_ip xmlns:emulab="http://www.protogeni.net/resources/rspec/ext/emulab/1"/>
     <services>
-      <install install_path="/local" url="https://www.instageni.uvm.edu/GENI-NSF/geni-tutorials/raw/master/HelloGENI/hellogeni-install.tar.gz"/>
+      <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/HelloGENI/hellogeni-install.tar.gz"/>
       <execute command="sudo /local/install-script.sh" shell="sh"/>
     </services>
     <interface client_id="server:if0">
@@ -45,7 +45,7 @@ IN THE WORK.
   <node xmlns:rs="http://www.protogeni.net/resources/rspec/ext/emulab/1" client_id="client" exclusive="false">
     <sliver_type name="default-vm"/>
     <services>  
-      <install install_path="/local" url="https://www.instageni.uvm.edu/GENI-NSF/geni-tutorials/raw/master/HelloGENI/hellogeni-install.tar.gz"/>
+      <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/HelloGENI/hellogeni-install.tar.gz"/>
       <execute command="sudo /local/install-script.sh" shell="sh"/>
     </services>
     <interface client_id="client:if0">
