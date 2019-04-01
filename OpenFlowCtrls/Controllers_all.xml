@@ -24,7 +24,7 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
     <nomac xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1"/>
     <routable_control_ip xmlns="http://www.protogeni.net/resources/rspec/ext/emulab/1"/>
     <sliver_type xmlns="http://www.geni.net/resources/rspec/3" name="emulab-xen">
-      <disk_image xmlns="http://www.geni.net/resources/rspec/3" name="urn:publicid:IDN+instageni.nysernet.org+image+ch-geni-net:ControllerAll" url="https://www.instageni.nysernet.org/image_metadata.php?uuid=d50c4cea-5b77-11e7-8c06-000000000000"/>
+      <disk_image xmlns="http://www.geni.net/resources/rspec/3" name="urn:publicid:IDN+instageni.cs.princeton.edu+image+ch-geni-net:ControllerAll" url="https://www.instageni.cs.princeton.edu/image_metadata.php?uuid=15258bb2-313a-11e9-a1f8-000099989701"/>
     </sliver_type>    
     <services>
       <execute xmlns="http://www.geni.net/resources/rspec/3" command="sudo cp -r /local/* /tmp/" shell="/bin/sh"/>
