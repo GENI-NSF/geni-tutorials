@@ -18,7 +18,6 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
 <node xmlns="http://www.geni.net/resources/rspec/3" client_id="Host1">
 <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://portal.geni.net/images/Xen-VM.svg"/>
 <sliver_type xmlns="http://www.geni.net/resources/rspec/3" name="emulab-xen">
-<disk_image xmlns="http://www.geni.net/resources/rspec/3" name="urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU14-OVS2.31"/>
 </sliver_type>
 <services xmlns="http://www.geni.net/resources/rspec/3"/>
 <interface xmlns="http://www.geni.net/resources/rspec/3" client_id="interface-6">
@@ -29,7 +28,6 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
 <node xmlns="http://www.geni.net/resources/rspec/3" client_id="Host2">
 <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://portal.geni.net/images/Xen-VM.svg"/>
 <sliver_type xmlns="http://www.geni.net/resources/rspec/3" name="emulab-xen">
-<disk_image xmlns="http://www.geni.net/resources/rspec/3" name="urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU14-OVS2.31"/>
 </sliver_type>
 <services xmlns="http://www.geni.net/resources/rspec/3"/>
 <interface xmlns="http://www.geni.net/resources/rspec/3" client_id="interface-8">
@@ -40,7 +38,6 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
 <node xmlns="http://www.geni.net/resources/rspec/3" client_id="Host3">
 <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://portal.geni.net/images/Xen-VM.svg"/>
 <sliver_type xmlns="http://www.geni.net/resources/rspec/3" name="emulab-xen">
-<disk_image xmlns="http://www.geni.net/resources/rspec/3" name="urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU14-OVS2.31"/>
 </sliver_type>
 <services xmlns="http://www.geni.net/resources/rspec/3"/>
 <interface xmlns="http://www.geni.net/resources/rspec/3" client_id="interface-10">
@@ -51,9 +48,11 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
 <node xmlns="http://www.geni.net/resources/rspec/3" client_id="Switch">
 <icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://portal.geni.net/images/Xen-VM.svg"/>
 <sliver_type xmlns="http://www.geni.net/resources/rspec/3" name="emulab-xen">
-<disk_image xmlns="http://www.geni.net/resources/rspec/3" name="urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU14-OVS2.31"/>
+<disk_image xmlns="http://www.geni.net/resources/rspec/3" name="urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU18-64-STD"/>
 </sliver_type>
-<services xmlns="http://www.geni.net/resources/rspec/3"/>
+<services xmlns="http://www.geni.net/resources/rspec/3">
+  <execute command="sudo apt-get -yq update;sudo apt-get -yq install openvswitch-switch;sudo systemctl enable openvswitch-switch;sudo systemctl start openvswitch-switch" shell="/bin/sh"/>
+</services>
 <interface xmlns="http://www.geni.net/resources/rspec/3" client_id="interface-7">
 <ip xmlns="http://www.geni.net/resources/rspec/3" address="10.0.0.11" type="ipv4" netmask="255.255.255.0"/>
 </interface>
