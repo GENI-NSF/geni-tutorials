@@ -50,8 +50,10 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
             <disk_image xmlns="http://www.geni.net/resources/rspec/3" name="urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU18-64-STD"/>
         </sliver_type>
         <services xmlns="http://www.geni.net/resources/rspec/3">
+        	<execute xmlns="http://www.geni.net/resources/rspec/3" command="/tmp/ovs_setup.sh" shell="/bin/sh"/>
+      		<install xmlns="http://www.geni.net/resources/rspec/3" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OVS_Setup/ovs_setup.tar.gz" install_path="/tmp"/>
             <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OpenFlowCtrls/wireshark.tar.gz"/>
-            <execute xmlns="http://www.geni.net/resources/rspec/3" command="sudo apt-get -yq update;sudo apt-get -yq install openvswitch-switch;sudo systemctl enable openvswitch-switch;sudo systemctl start openvswitch-switch;sudo /local/install-script-wireshark.sh" shell="/bin/sh"/>
+            <execute xmlns="http://www.geni.net/resources/rspec/3" command="sudo /local/install-script-wireshark.sh" shell="/bin/sh"/>
         </services>
 		<interface xmlns="http://www.geni.net/resources/rspec/3" client_id="interface-1">
 			<ip xmlns="http://www.geni.net/resources/rspec/3" address="10.10.1.12" type="ipv4" netmask="255.255.255.0"/>
