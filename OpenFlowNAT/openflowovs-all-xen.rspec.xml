@@ -47,11 +47,9 @@ OR THE USE OR OTHER DEALINGS IN THE WORK.
 		<icon xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" url="https://portal.geni.net/images/router.svg"/>
 		<site xmlns="http://www.protogeni.net/resources/rspec/ext/jacks/1" id="Site 3"/>
 		<sliver_type xmlns="http://www.geni.net/resources/rspec/3" name="emulab-xen">
-            <disk_image xmlns="http://www.geni.net/resources/rspec/3" name="urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU18-64-STD"/>
+            <disk_image xmlns="http://www.geni.net/resources/rspec/3" name="urn:publicid:IDN+emulab.net+image+emulab-ops:UBUNTU18OVS"/>
         </sliver_type>
         <services xmlns="http://www.geni.net/resources/rspec/3">
-        	<execute xmlns="http://www.geni.net/resources/rspec/3" command="/tmp/ovs_setup.sh" shell="/bin/sh"/>
-      		<install xmlns="http://www.geni.net/resources/rspec/3" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OVS_Setup/ovs_setup.tar.gz" install_path="/tmp"/>
             <install install_path="/local" url="https://github.com/GENI-NSF/geni-tutorials/raw/master/OpenFlowCtrls/wireshark.tar.gz"/>
             <execute xmlns="http://www.geni.net/resources/rspec/3" command="sudo /local/install-script-wireshark.sh" shell="/bin/sh"/>
         </services>
