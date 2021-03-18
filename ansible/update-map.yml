@@ -20,6 +20,6 @@
 #
 ---
 - hosts: server*
-  sudo: True
+  become: True
   tasks:
   - include: roles/nmap/tasks/map.yml

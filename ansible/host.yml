@@ -20,7 +20,7 @@
 ---
 - name: Configure client
   hosts: host*
-  sudo: True
+  become: True
   roles:
    - apache
    - iperf

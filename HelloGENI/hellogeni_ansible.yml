@@ -23,7 +23,7 @@
 
 - name: test server and client
   hosts: all
-  sudo: True
+  become: True
   tasks:
    - name: wait for initialization to finish
      pause: minutes=5
@@ -36,7 +36,7 @@
   
 - name: test server
   hosts: server
-  sudo: True
+  become: True
   tasks:
    - name: check iperf running
      shell: ps aux | grep iperf
@@ -57,7 +57,7 @@
 
 - name: test client
   hosts: client
-  sudo: True
+  become: True
   tasks:
    - name: ping test
      command: ping -c 5 10.10.10.1

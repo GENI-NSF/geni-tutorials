@@ -20,7 +20,7 @@
 ---
 - name: Configure server
   hosts: server
-  sudo: True
+  become: True
   vars: 
     web_root: /var/www
   tasks:
